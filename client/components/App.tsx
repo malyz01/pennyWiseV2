@@ -9,7 +9,7 @@ const App = () => {
   const sample: ISample[] = [
     {
       id: 1,
-      name: 'Sample'
+      name: 'Sample Nav'
     }
   ];
 
