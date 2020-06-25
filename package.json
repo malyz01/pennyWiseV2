@@ -1,8 +1,8 @@
 {
-  "name": "bp",
-  "version": "1.0.1",
+  "name": "reacttypescriptbp",
+  "version": "0.0.1",
   "description": "boiler plate",
-  "repository": "https://github.com/malyz01/bplate.git",
+  "repository": "https://github.com/malyz01/ReactTypescriptBP",
   "main": "server/index.js",
   "author": "Malyz",
   "license": "ISC",
@@ -15,8 +15,7 @@
     "start": "run-s build server",
     "build": "webpack",
     "server": "node server",
-    "test": "jest --watchAll",
-    "check:types": "tsc"
+    "test": "jest --watchAll"
   },
   "jest": {
     "setupFiles": [
