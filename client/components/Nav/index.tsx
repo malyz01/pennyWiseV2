@@ -1,14 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import { INav } from './interface'
+import { IProps } from './interface';
 
-const index = (props: INav) => {
+const index = ({ sample }: IProps) => {
   return (
     <div>
-      <div>{props.id}</div>
-      <div>{props.name}</div>
+      {sample.map((x, i) => (
+        <div key={i}>
+          {x.id}: {x.name}
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
