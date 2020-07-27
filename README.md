@@ -1,7 +1,8 @@
-# React using Typescript, NodeJs, ExpressJS Boiler Plate
+## Penny Wise v2
 
-### React
+### Stack
 
-### Redux
-
-### Express
+- React (Typescript)
+- Node JS
+- Express JS
+-
