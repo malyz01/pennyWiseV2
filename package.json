@@ -1,8 +1,8 @@
 {
-  "name": "reacttypescriptbp",
+  "name": "pennywisev2",
   "version": "0.0.1",
-  "description": "boiler plate",
-  "repository": "https://github.com/malyz01/ReactTypescriptBP",
+  "description": "Penny Wise v2",
+  "repository": "https://github.com/malyz01/pennyWiseV2.git",
   "main": "server/index.js",
   "author": "Malyz",
   "license": "ISC",
