@@ -67,4 +67,3 @@ bundle.*
 dev.sqlite3
 
 .vscode
-migrations/
