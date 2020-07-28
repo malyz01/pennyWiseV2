@@ -6,24 +6,18 @@ module.exports = {
       {
         userId: 'de65d050-4e0e-4a79-8063-74e7b9e53dd4',
         fullName: 'John Doe',
-        avatar:
-          'https://cdn2.iconfinder.com/data/icons/web-mobile-2-1/64/user_avatar_admin_web_mobile_business_office-512.png',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         userId: '7b85a36f-abd4-4a76-9860-bd88670ef1f0',
         fullName: 'Jimmmi',
-        avatar:
-          'https://cdn2.iconfinder.com/data/icons/web-mobile-2-1/64/user_avatar_admin_web_mobile_business_office-512.png',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         userId: '8d96e758-08e6-4d85-adbb-2f5ba8308b85',
         fullName: 'Matt',
-        avatar:
-          'https://cdn2.iconfinder.com/data/icons/web-mobile-2-1/64/user_avatar_admin_web_mobile_business_office-512.png',
         createdAt: new Date(),
         updatedAt: new Date()
       }
