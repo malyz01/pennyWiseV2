@@ -1,11 +1,18 @@
 'use strict';
+const { v4: uuid } = require('uuid');
+
+const getUUID = () => uuid();
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('profiles', {
       userId: {
         allowNull: false,
-        type: Sequelize.UUID
+        type: Sequelize.UUID,
+        references: {
+          model: 'users',
+          key: 'id'
+        }
       },
       fullName: {
         type: Sequelize.STRING

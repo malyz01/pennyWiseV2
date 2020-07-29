@@ -1,4 +1,5 @@
 'use strict';
+const { v4: uuid } = require('uuid');
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Profile extends Model {
@@ -9,6 +10,13 @@ module.exports = (sequelize, DataTypes) => {
 
   Profile.init(
     {
+      id: {
+        type: DataTypes.UUID,
+        defaultValue: function () {
+          return uuid();
+        },
+        primaryKey: true
+      },
       userId: {
         allowNull: false,
         primaryKey: true,
