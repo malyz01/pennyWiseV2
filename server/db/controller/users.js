@@ -1,12 +1,11 @@
-const { sequelize, Sequelize } = require('../models');
-const Users = require('../models/user')(sequelize, Sequelize.DataTypes);
+const { User } = require('../models');
 
-function createUser(data) {
-  return Users.create(data);
+async function createUser(data) {
+  return await User.create(data);
 }
 
-function getUser(id) {
-  return Users.findOne({
+async function getUser(id) {
+  return User.findOne({
     where: {
       id
     }
