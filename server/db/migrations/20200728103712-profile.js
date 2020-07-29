@@ -12,27 +12,18 @@ module.exports = {
           key: "id",
         },
       },
-      email: {
-        allowNull: false,
-        unique: true,
+      fullName: {
         type: Sequelize.STRING,
-        validate: {
-          isEmail: true,
-        },
       },
-      password: {
-        allowNull: false,
+      avatar: {
         type: Sequelize.STRING,
+        defaultValue:
+          "https://cdn2.iconfinder.com/data/icons/web-mobile-2-1/64/user_avatar_admin_web_mobile_business_office-512.png",
       },
     });
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
+    await queryInterface.dropTable("Profiles");
   },
 };
