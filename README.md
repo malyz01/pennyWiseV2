@@ -6,3 +6,4 @@
 - Node JS
 - Express JS
 - Postgres (Sequelize)
+- GraphQL
