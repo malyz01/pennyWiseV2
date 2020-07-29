@@ -5,4 +5,4 @@
 - React (Typescript)
 - Node JS
 - Express JS
--
+- Postgres (Sequelize)
