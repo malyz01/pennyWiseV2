@@ -1,5 +1,5 @@
 "use strict";
-const uuid = require("uuid/v4");
+const { v4 } = require("uuid");
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -7,8 +7,8 @@ module.exports = {
       id: {
         allowNull: false,
         primaryKey: true,
-        type: Sequelize.UUIDV4,
-        defaultValue: uuid(),
+        type: Sequelize.UUID,
+        defaultValue: v4(),
       },
       email: {
         allowNull: false,
@@ -22,6 +22,8 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      createdAt: Sequelize.DATE,
+      updatedAt: Sequelize.DATE,
     });
   },
 

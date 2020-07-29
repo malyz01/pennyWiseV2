@@ -6,7 +6,7 @@ module.exports = {
       userId: {
         allowNull: false,
         primaryKey: true,
-        type: Sequelize.UUIDV4,
+        type: Sequelize.UUID,
         references: {
           model: "Users",
           key: "id",
@@ -20,6 +20,8 @@ module.exports = {
         defaultValue:
           "https://cdn2.iconfinder.com/data/icons/web-mobile-2-1/64/user_avatar_admin_web_mobile_business_office-512.png",
       },
+      createdAt: Sequelize.DATE,
+      updatedAt: Sequelize.DATE,
     });
   },
 
