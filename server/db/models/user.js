@@ -1,5 +1,7 @@
-'use strict';
-const { Model } = require('sequelize');
+"use strict";
+const uuid = require("uuid/v4");
+const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -11,20 +13,21 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+  User.beforeCreate((user) => user.id = uuid());
   User.init(
     {
       id: {
         allowNull: false,
         primaryKey: true,
-        type: DataTypes.STRING
+        type: DataTypes.UUIDV4,
       },
       email: DataTypes.STRING,
-      password: DataTypes.STRING
+      password: DataTypes.STRING,
     },
     {
       sequelize,
-      modelName: 'User'
-    }
+      modelName: "User",
+    },
   );
   return User;
 };

@@ -1,21 +1,31 @@
-'use strict';
+"use strict";
+const uuid = require("uuid/v4");
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */
+    await queryInterface.createTable("Users", {
+      id: {
+        allowNull: false,
+        primaryKey: true,
+        type: Sequelize.UUIDV4,
+        defaultValue: uuid(),
+      },
+      email: {
+        allowNull: false,
+        unique: true,
+        type: Sequelize.STRING,
+        validate: {
+          isEmail: true,
+        },
+      },
+      password: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+    });
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
-  }
+    await queryInterface.dropTable("Users");
+  },
 };
