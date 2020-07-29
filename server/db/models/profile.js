@@ -1,9 +1,7 @@
 "use strict";
-const { v4 } = require("uuid");
 const { Model } = require("sequelize");
-
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class Profile extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,23 +11,32 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  User.beforeCreate((user) => user.id = v4());
-  User.init(
+  Profile.init(
     {
-      id: {
+      userId: {
         allowNull: false,
         primaryKey: true,
-        type: DataTypes.UUID,
+        references: {
+          model: "Users",
+          key: "id",
+        },
+        type: DataTypes.STRING,
       },
-      email: DataTypes.STRING,
-      password: DataTypes.STRING,
+      fullName: {
+        type: DataTypes.STRING,
+      },
+      avatar: {
+        type: DataTypes.STRING,
+        defaultValue:
+          "https://cdn2.iconfinder.com/data/icons/web-mobile-2-1/64/user_avatar_admin_web_mobile_business_office-512.png",
+      },
       createdAt: DataTypes.DATE,
       updatedAt: DataTypes.DATE,
     },
     {
       sequelize,
-      modelName: "User",
+      modelName: "Profile",
     },
   );
-  return User;
+  return Profile;
 };
