@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const server = express();
-const { getUser } = require('./db/controller/users');
+const User = require('./db/controller/users');
 
 // SAMPLE GRAPHQL
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
@@ -43,7 +43,7 @@ server.use(express.json());
 server.use(express.static(path.resolve('server', 'public')));
 
 server.get('/ss', async (req, res) => {
-  res.json(await getUser('7b85a36f-abd4-4a76-9860-bd88670ef1f0'));
+  res.json(await User.fetchAllUser());
 });
 // console.log(typeof graphqlExpress);
 // server.use('/graphql', graphqlExpress({ schema }));

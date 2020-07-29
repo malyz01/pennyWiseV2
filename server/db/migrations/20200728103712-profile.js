@@ -1,31 +1,26 @@
-"use strict";
+'use strict';
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("Profiles", {
+    await queryInterface.createTable('profiles', {
       userId: {
         allowNull: false,
-        primaryKey: true,
-        type: Sequelize.UUID,
-        references: {
-          model: "Users",
-          key: "id",
-        },
+        type: Sequelize.UUID
       },
       fullName: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       avatar: {
         type: Sequelize.STRING,
         defaultValue:
-          "https://cdn2.iconfinder.com/data/icons/web-mobile-2-1/64/user_avatar_admin_web_mobile_business_office-512.png",
+          'https://cdn2.iconfinder.com/data/icons/web-mobile-2-1/64/user_avatar_admin_web_mobile_business_office-512.png'
       },
       createdAt: Sequelize.DATE,
-      updatedAt: Sequelize.DATE,
+      updatedAt: Sequelize.DATE
     });
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("Profiles");
-  },
+    await queryInterface.dropTable('profiles');
+  }
 };

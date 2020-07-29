@@ -1,11 +1,15 @@
-const { User } = require('../models');
+const { user } = require('../models');
 
 async function createUser(data) {
-  return await User.create(data);
+  return await user.create(data);
+}
+
+async function fetchAllUser() {
+  return await user.findAll({ include: 'profile' });
 }
 
 async function getUser(id) {
-  return User.findOne({
+  return user.findOne({
     where: {
       id
     }
@@ -14,5 +18,6 @@ async function getUser(id) {
 
 module.exports = {
   createUser,
-  getUser
+  getUser,
+  fetchAllUser
 };

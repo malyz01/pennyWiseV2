@@ -3,7 +3,7 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Profile extends Model {
     static associate(models) {
-      this.belongsTo(models.User);
+      this.belongsTo(models.user);
     }
   }
 
@@ -12,10 +12,6 @@ module.exports = (sequelize, DataTypes) => {
       userId: {
         allowNull: false,
         primaryKey: true,
-        references: {
-          model: 'Users',
-          key: 'id'
-        },
         type: DataTypes.STRING
       },
       fullName: {
@@ -31,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: 'Profile'
+      modelName: 'profile'
     }
   );
   return Profile;
