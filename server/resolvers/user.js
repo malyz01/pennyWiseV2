@@ -1,7 +1,15 @@
-const { fetchAllUser } = require('./db/controller/users');
+const u = require('../db/controller/users');
 
 module.exports = {
   Query: {
-    users: async (root, arg, context, info) => await fetchAllUser()
+    users: async (root, arg, context, info) => {
+      return await u.fetchAllUser();
+    },
+    user: async (root, arg, context, info) => {
+      return await u.getUser(arg.id);
+    }
+  },
+  Mutation: {
+    createUser: (root, arg, context, info) => {}
   }
 };
