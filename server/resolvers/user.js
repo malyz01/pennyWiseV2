@@ -2,9 +2,9 @@ const u = require('../db/controller/users');
 
 module.exports = {
   Query: {
-    users: async (root, arg, context, info) => await u.fetchAllUser(),
-    user: async (root, arg, context, info) => {
-      return await u.getUser(arg.id);
+    users: (root, arg, context, info) => u.fetchAllUser(),
+    user: (root, arg, context, info) => {
+      return u.getUser(arg.id);
     }
   },
   Mutation: {
