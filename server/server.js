@@ -3,11 +3,12 @@ const path = require('path');
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const cors = require('cors');
-
 const typeDefs = require('./typedef');
 const resolvers = require('./resolvers');
 
-const apollo = new ApolloServer({ typeDefs, resolvers });
+const IN_PROD = process.env.NODE_ENV === 'production';
+
+const apollo = new ApolloServer({ typeDefs, resolvers, playground: !IN_PROD });
 const server = express();
 
 server.use(cors());
