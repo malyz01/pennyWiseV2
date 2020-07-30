@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const cors = require('cors');
-const typeDefs = require('./typedef');
+const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
 
 const IN_PROD = process.env.NODE_ENV === 'production';
