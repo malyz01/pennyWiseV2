@@ -1,39 +1,13 @@
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
-const { ApolloServer, gql } = require('apollo-server-express');
+const { ApolloServer } = require('apollo-server-express');
 const cors = require('cors');
 
-const typeDefs = gql`
-  type Book {
-    title: String
-    author: String
-  }
-
-  type Query {
-    books: [Book]
-  }
-`;
-
-const books = [
-  {
-    title: 'Harry Potter and the Chamber of Secrets',
-    author: 'J.K. Rowling'
-  },
-  {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton'
-  }
-];
-
-const resolvers = {
-  Query: {
-    books: () => books
-  }
-};
+const typeDefs = require('./typedef');
+const resolvers = require('./resolvers');
 
 const apollo = new ApolloServer({ typeDefs, resolvers });
-
 const server = express();
 
 server.use(cors());
