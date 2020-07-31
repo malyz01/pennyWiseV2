@@ -1,1 +1,4 @@
-export const TEST = 'TEST'
+export enum Types {
+  FETCH_USER,
+  FETCH_USERS
+}

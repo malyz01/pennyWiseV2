@@ -1,0 +1,25 @@
+import { gql } from '@apollo/client';
+
+import { Types } from '../types';
+import client from '../../graphql';
+
+const setReducer = (type: Types, payload: any) => ({ type, payload });
+
+export const fetchUsers = () => async (dispatch) => {
+  const users = await client.query({
+    query: gql`
+      query fetchUsers {
+        users {
+          id
+          email
+          profile {
+            id
+            fullName
+            avatar
+          }
+        }
+      }
+    `
+  });
+  console.log(users);
+};
