@@ -6,7 +6,7 @@ import client from '../../graphql';
 const setReducer = (type: Types, payload: any) => ({ type, payload });
 
 export const fetchUsers = () => async (dispatch) => {
-  const users = await client.query({
+  const r = await client.query({
     query: gql`
       query fetchUsers {
         users {
@@ -21,5 +21,5 @@ export const fetchUsers = () => async (dispatch) => {
       }
     `
   });
-  console.log(users);
+  dispatch(setReducer(Types.FETCH_USERS, r.data.users));
 };
