@@ -11,8 +11,18 @@ module.exports = gql`
   }
 
   type User {
-    id: String
+    id: ID
     email: String!
+    profile: Profile
+    createdAt: String
+    updatedAt: String
+  }
+
+  type Profile {
+    id: ID
+    userId: ID
+    fullName: String
+    avatar: String
     createdAt: String
     updatedAt: String
   }

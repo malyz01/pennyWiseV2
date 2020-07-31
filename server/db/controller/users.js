@@ -5,15 +5,16 @@ async function createUser(data) {
 }
 
 async function fetchAllUser() {
-  // return await user.findAll({ include: 'profile' });
-  return await user.findAll();
+  return await user.findAll({ include: 'profile' });
+  // return await user.findAll();
 }
 
 async function getUser(id) {
   return user.findOne({
     where: {
       id
-    }
+    },
+    include: 'profile'
   });
 }
 
