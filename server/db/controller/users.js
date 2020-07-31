@@ -1,21 +1,21 @@
-const { user } = require('../models');
+const { user: User } = require('../models');
 
 async function createUser(data) {
-  return await user.create(data);
+  return await User.create(data);
 }
 
 async function fetchAllUser() {
-  console.log(await user.comparePassword('12'));
-  return await user.findAll({ include: 'profile' });
+  return await User.findAll({ include: 'profile' });
 }
 
 async function getUser(id) {
-  return user.findOne({
+  const user = await User.findOne({
     where: {
       id
     },
     include: 'profile'
   });
+  return user;
 }
 
 module.exports = {
