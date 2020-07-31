@@ -6,7 +6,6 @@ async function createUser(data) {
 
 async function fetchAllUser() {
   return await user.findAll({ include: 'profile' });
-  // return await user.findAll();
 }
 
 async function getUser(id) {

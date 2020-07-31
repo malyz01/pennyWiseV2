@@ -8,6 +8,6 @@ module.exports = {
     }
   },
   Mutation: {
-    createUser: (root, arg, context, info) => {}
+    createUser: (root, arg, context, info) => u.createUser(arg.userInput)
   }
 };
