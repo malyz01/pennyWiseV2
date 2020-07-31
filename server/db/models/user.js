@@ -23,12 +23,6 @@ module.exports = (sequelize, DataTypes) => {
       updatedAt: DataTypes.DATE
     },
     {
-      getterMethods: {
-        async comparePassword(inpPassword) {
-          const isMatch = await bcrypt.compare(inpPassword, this.password);
-          return isMatch;
-        }
-      },
       hooks: {
         beforeCreate: async (user) => {
           const hashPassword = await bcrypt.hash(user.password, 10);
@@ -39,5 +33,6 @@ module.exports = (sequelize, DataTypes) => {
       modelName: 'user'
     }
   );
+
   return User;
 };

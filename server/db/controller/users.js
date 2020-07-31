@@ -5,6 +5,7 @@ async function createUser(data) {
 }
 
 async function fetchAllUser() {
+  console.log(await user.comparePassword('12'));
   return await user.findAll({ include: 'profile' });
 }
 
