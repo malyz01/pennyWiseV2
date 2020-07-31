@@ -4,6 +4,15 @@ async function createUser(data) {
   return await User.create(data);
 }
 
+async function loginUser(data) {
+  const { dataValues: user } = await User.findByPk(data.id);
+  if (user.isValid(data.password)) {
+    return user;
+  } else {
+    return null;
+  }
+}
+
 async function fetchAllUser() {
   return await User.findAll({ include: 'profile' });
 }
