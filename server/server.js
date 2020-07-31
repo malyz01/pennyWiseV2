@@ -3,7 +3,6 @@ const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const { ApolloServer } = require('apollo-server-express');
-
 const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
 
