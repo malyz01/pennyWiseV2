@@ -17,13 +17,4 @@ module.exports = gql`
     createdAt: String
     updatedAt: String
   }
-
-  type Profile {
-    id: ID
-    userId: ID
-    fullName: String
-    avatar: String
-    createdAt: String
-    updatedAt: String
-  }
 `;
