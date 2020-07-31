@@ -2,6 +2,7 @@ import { gql } from '@apollo/client';
 
 import { Types } from '../types';
 import client from '../../graphql';
+import { setError } from './error'
 
 const setReducer = (type: Types, payload: any) => ({ type, payload });
 
@@ -20,6 +21,6 @@ export const fetchUsers = () => async (dispatch) => {
     });
     dispatch(setReducer(Types.FETCH_USERS, r.data.users));
   } catch (e) {
-    // dispatch(setReducer());
+    setError(e.message)(dispatch)
   }
 };
