@@ -28,6 +28,7 @@ async function getUser(id) {
 }
 
 module.exports = {
+  loginUser,
   createUser,
   getUser,
   fetchAllUser
