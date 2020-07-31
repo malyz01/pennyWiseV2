@@ -6,6 +6,16 @@ module.exports = gql`
     profiles: [Profile!]!
   }
 
+  extend type Mutation {
+    createUserProfile(userProfile: InputUserProfile!): User
+  }
+
+  input InputUserProfile {
+    userId: ID
+    fullName: String
+    avatar: String
+  }
+
   type Profile {
     id: ID
     userId: ID
