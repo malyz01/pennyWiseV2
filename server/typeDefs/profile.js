@@ -7,7 +7,7 @@ module.exports = gql`
   }
 
   extend type Mutation {
-    createUserProfile(userProfile: InputUserProfile!): User
+    createUserProfile(userProfile: InputUserProfile!): Profile!
   }
 
   input InputUserProfile {

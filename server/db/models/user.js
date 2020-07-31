@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
 
+  // TODO add setter for password
   User.init(
     {
       id: {
