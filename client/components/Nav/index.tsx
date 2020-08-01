@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { IProps } from './interface';
-
-const index = ({ sample }: IProps) => {
+const index = () => {
   return (
     <div
       style={{
@@ -14,11 +12,7 @@ const index = ({ sample }: IProps) => {
         alignItems: 'center'
       }}
     >
-      {sample.map((x, i) => (
-        <div key={i}>
-          {x.id}: {x.name}
-        </div>
-      ))}
+      NAV MENU
     </div>
   );
 };
