@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { fetchUsers } from '../../store/actions/users';
+import { connect, ConnectedProps } from 'react-redux';
+import { RouteComponentProps } from 'react-router-dom';
 
-const Landing = (props) => {
+import * as users from '../../store/actions/users';
+
+const Landing = (props: IProps) => {
   useEffect(() => {
     props.fetchUsers();
   }, []);
@@ -16,9 +18,13 @@ const Landing = (props) => {
   );
 };
 
-// TODO add types
 const mapState = (state) => ({
   users: state.users.all.data
 });
+const mapDispatch = { ...users };
+const connector = connect(mapState, mapDispatch);
+type PropsFromRedux = ConnectedProps<typeof connector>;
 
-export default connect(mapState, { fetchUsers })(Landing);
+interface IProps extends PropsFromRedux, RouteComponentProps {}
+
+export default connector(Landing);

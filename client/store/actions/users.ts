@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
-import { Types } from '../types';
 import client from '../../graphql';
-import { setError } from './error'
+import { Types } from '../types';
+import { setError } from './error';
 
 const setReducer = (type: Types, payload: any) => ({ type, payload });
 
@@ -11,16 +11,20 @@ export const fetchUsers = () => async (dispatch) => {
     const r = await client.query({
       query: gql`
         query fetchUsers {
-          users { 
-            id email profile {
-              id fullName avatar
+          users {
+            id
+            email
+            profile {
+              id
+              fullName
+              avatar
             }
           }
-      }
-    `
+        }
+      `
     });
     dispatch(setReducer(Types.FETCH_USERS, r.data.users));
   } catch (e) {
-    setError(e.message)(dispatch)
+    setError(e.message)(dispatch);
   }
 };
