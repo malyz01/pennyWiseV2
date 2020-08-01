@@ -10,12 +10,12 @@ export const fetchUsers = () => async (dispatch) => {
   try {
     const r = await client.query({
       query: gql`
-      query fetchUsers {
-        users { 
-          id email profile {
-            id fullName avatar
+        query fetchUsers {
+          users { 
+            id email profile {
+              id fullName avatar
+            }
           }
-        }
       }
     `
     });
