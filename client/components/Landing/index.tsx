@@ -7,7 +7,18 @@ const Landing = (props) => {
     props.fetchUsers();
   }, []);
 
-  return <h1 style={{ textAlign: 'center' }}>Landing Page</h1>;
+  return (
+    <div>
+      <h1 style={{ textAlign: 'center' }}>Landing Page</h1>
+      {!!props.users.length &&
+        props.users.map((u, i) => <div key={i}>{u.email}</div>)}
+    </div>
+  );
 };
 
-export default connect(null, { fetchUsers })(Landing);
+// TODO add types
+const mapState = (state) => ({
+  users: state.users.all.data
+});
+
+export default connect(mapState, { fetchUsers })(Landing);

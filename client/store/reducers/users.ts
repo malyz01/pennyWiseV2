@@ -1,20 +1,20 @@
 import { Types } from '../types';
 
 const INITIAL = {
-  user: {
-    loading: true,
-    data: {}
-  },
-  users: {
+  all: {
     loading: true,
     data: []
+  },
+  selected: {
+    loading: true,
+    data: {}
   }
-}
+};
 
 export default (state = INITIAL, action) => {
   switch (action.type) {
     case Types.FETCH_USERS:
-      return { ...state, users: { loading: false, data: action.payload } };
+      return { ...state, all: { loading: false, data: action.payload } };
     default:
       return state;
   }
