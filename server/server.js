@@ -13,7 +13,10 @@ const server = express();
 
 server.use(cors());
 server.use(express.static(path.resolve('server', 'public')));
-
 apollo.applyMiddleware({ app: server });
+
+server.get('*', (_, res) => {
+  res.sendFile(path.resolve('server', 'public', 'index.html'));
+});
 
 module.exports = server;

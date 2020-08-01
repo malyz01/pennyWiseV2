@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Nav from './Nav';
 import Landing from './Landing';
@@ -14,10 +14,12 @@ const App = () => {
   ];
 
   return (
-    <HashRouter>
+    <Router>
       <Nav sample={sample} />
-      <Route exact path="/" component={Landing} />
-    </HashRouter>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+      </Switch>
+    </Router>
   );
 };
 
