@@ -6,11 +6,14 @@ export const sIndex = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'flex-end',
-      padding: '1em',
+      padding: '1em 0',
       height: 50
     },
     menuContainer: {
       display: 'flex'
+    },
+    menu: {
+      marginLeft: '1em'
     }
   })
 );
