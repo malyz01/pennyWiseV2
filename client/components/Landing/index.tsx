@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
+import { Container } from '@material-ui/core';
 
 import * as users from '../../store/actions/users';
 
@@ -12,8 +13,10 @@ const Landing = (props: IProps) => {
   return (
     <div>
       <h1 style={{ textAlign: 'center' }}>Landing Page</h1>
-      {!!props.users.length &&
-        props.users.map((u, i) => <div key={i}>{u.email}</div>)}
+      <Container>
+        {!!props.users.length &&
+          props.users.map((u, i) => <div key={i}>{u.email}</div>)}
+      </Container>
     </div>
   );
 };

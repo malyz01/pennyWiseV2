@@ -3,10 +3,22 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 export const sIndex = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      height: '100px',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      padding: '1em'
+    }
+  })
+);
+
+export const sLogo = makeStyles((theme: Theme) =>
+  createStyles({
+    mainContainer: {
+      display: 'flex'
+    },
+    logoContainer: {
+      width: 60,
+      marginRight: '1em'
     }
   })
 );
