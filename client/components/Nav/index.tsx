@@ -8,6 +8,10 @@ const index = () => {
   return (
     <div className={c.mainContainer}>
       <Logo />
+      <div className={c.menuContainer}>
+        <div>Budget Tools</div>
+        <div>Signed in as: John Doe</div>
+      </div>
     </div>
   );
 };

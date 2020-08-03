@@ -8,6 +8,9 @@ const theme = createMuiTheme({
     },
     h2: {
       fontFamily: 'Boogaloo'
+    },
+    h3: {
+      fontFamily: 'Boogaloo'
     }
   },
   palette: {

@@ -11,8 +11,12 @@ const Logo = () => {
       <div className={c.logoContainer}>
         <Image aspectRatio={1 / 1} src="/assets/images/pennywise_logo.png" />
       </div>
-      <Typo color="primary">Penny</Typo>
-      <Typo color="secondary">Wise</Typo>
+      <Typo className={c.typo} variant="h3" color="primary">
+        Penny
+      </Typo>
+      <Typo className={c.typo} variant="h3" color="secondary">
+        Wise
+      </Typo>
     </ButtonBase>
   );
 };

@@ -4,9 +4,13 @@ export const sIndex = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '1em'
+      justifyContent: 'space-between',
+      alignItems: 'flex-end',
+      padding: '1em',
+      height: 50
+    },
+    menuContainer: {
+      display: 'flex'
     }
   })
 );
@@ -14,11 +18,14 @@ export const sIndex = makeStyles((theme: Theme) =>
 export const sLogo = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      display: 'flex'
+      display: 'flex',
+      alignItems: 'flex-end',
+      height: '100%'
     },
     logoContainer: {
-      width: 60,
+      width: 50,
       marginRight: '1em'
-    }
+    },
+    typo: {}
   })
 );
