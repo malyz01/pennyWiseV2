@@ -13,7 +13,6 @@ const Landing = (props: IProps) => {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center' }}>Landing Page</h1>
       <Container>
         <Carousel />
         {!!props.users.length &&
