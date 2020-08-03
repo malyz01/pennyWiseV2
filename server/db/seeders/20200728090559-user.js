@@ -13,7 +13,7 @@ module.exports = {
       },
       {
         id: '7b85a36f-abd4-4a76-9860-bd88670ef1f0',
-        email: 'jimmi@testing.com',
+        email: 'janedoe@testing.com',
         password:
           '$2b$10$E42ZIELPHZiIN.2DjHbywuhHDONKSRK7/jppFiJU/wtm2EGV0Fszu',
         createdAt: new Date(),
@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         id: '8d96e758-08e6-4d85-adbb-2f5ba8308b85',
-        email: 'matt@testing.com',
+        email: 'GI@testing.com',
         password:
           '$2b$10$E42ZIELPHZiIN.2DjHbywuhHDONKSRK7/jppFiJU/wtm2EGV0Fszu',
         createdAt: new Date(),

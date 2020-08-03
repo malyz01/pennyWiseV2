@@ -17,6 +17,8 @@
   },
   "plugins": ["react"],
   "rules": {
-    "node/no-unpublished-require": false
+    "node/no-unpublished-require": false,
+    "no-unused-vars": "off",
+    "no-console": "off"
   }
 }

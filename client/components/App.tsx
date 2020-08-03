@@ -1,23 +1,17 @@
 import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Nav from './Nav';
 import Landing from './Landing';
-import { ISample } from './Nav/interface';
 
 const App = () => {
-  const sample: ISample[] = [
-    {
-      id: 1,
-      name: 'Sample Nav'
-    }
-  ];
-
   return (
-    <HashRouter>
-      <Nav sample={sample} />
-      <Route exact path="/" component={Landing} />
-    </HashRouter>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Landing} />
+      </Switch>
+    </Router>
   );
 };
 
