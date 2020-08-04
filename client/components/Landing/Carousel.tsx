@@ -1,8 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'material-ui-image';
+import { sCarousel } from './style';
 
 const Carousel = () => {
+  const c = sCarousel();
+
   const settings = {
     autoplay: true,
     autoplaySpeed: 5000,
@@ -15,7 +18,7 @@ const Carousel = () => {
   };
 
   return (
-    <div>
+    <div className={c.mainContainer}>
       <Slider {...settings}>
         <Image aspectRatio={14 / 7} src={`/assets/images/landing/S1.jpg`} />
 
