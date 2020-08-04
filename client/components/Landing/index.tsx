@@ -13,8 +13,8 @@ const Landing = (props: IProps) => {
 
   return (
     <div>
+      <Carousel />
       <Container>
-        <Carousel />
         {!!props.users.length &&
           props.users.map((u, i) => <div key={i}>{u.email}</div>)}
       </Container>
