@@ -1,5 +1,6 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
+import Typo from '@material-ui/core/Typography';
 import { Container } from '@material-ui/core';
 import { sIndex } from './style';
 
@@ -13,7 +14,7 @@ const Landing = (props: IProps) => {
       <Carousel />
       <Container>
         <div className={c.content1Container}>
-          <div>PennyWise</div>
+          <Typo variant="h3">PennyWise</Typo>
           <div>Stuck on the Money-Go-Round?</div>
           <div>Bring your money and budgeting back in balance</div>
         </div>

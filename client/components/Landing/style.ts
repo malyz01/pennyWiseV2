@@ -12,7 +12,10 @@ export const sIndex = makeStyles((theme: Theme) =>
 export const sCarousel = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      marginBottom: '2em'
+      marginBottom: '2em',
+      '&:div': {
+        color: 'red'
+      }
     }
   })
 );
