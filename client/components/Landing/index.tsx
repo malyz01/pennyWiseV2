@@ -15,6 +15,8 @@ const Landing = (props: IProps) => {
     <div>
       <Carousel />
       <Container>
+        <div>Stuck on the Money-Go-Round?</div>
+        <div>Bring your money and budgeting back in balance</div>
         {!!props.users.length &&
           props.users.map((u, i) => <div key={i}>{u.email}</div>)}
       </Container>
