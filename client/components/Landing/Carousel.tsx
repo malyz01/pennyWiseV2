@@ -4,9 +4,12 @@ import Image from 'material-ui-image';
 
 const Carousel = () => {
   const settings = {
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
     dots: true,
     infinite: true,
-    speed: 900,
+    speed: 2500,
     slidesToShow: 1,
     slidesToScroll: 1
   };
@@ -14,27 +17,11 @@ const Carousel = () => {
   return (
     <div>
       <Slider {...settings}>
-        <h2>
-          <div>
-            <Image aspectRatio={14 / 7} src={`/assets/images/landing/S1.jpg`} />
-          </div>
-        </h2>
-        <h2>
-          <div>
-            <Image
-              aspectRatio={14 / 7}
-              src={`/assets/images/landing/slide2.jpg`}
-            />
-          </div>
-        </h2>
-        <h2>
-          <div>
-            <Image
-              aspectRatio={14 / 7}
-              src={`/assets/images/landing/slide3.jpg`}
-            />
-          </div>
-        </h2>
+        <Image aspectRatio={14 / 7} src={`/assets/images/landing/S1.jpg`} />
+
+        <Image aspectRatio={14 / 7} src={`/assets/images/landing/slide2.jpg`} />
+
+        <Image aspectRatio={14 / 7} src={`/assets/images/landing/slide3.jpg`} />
       </Slider>
     </div>
   );
