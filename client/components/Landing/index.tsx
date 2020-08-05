@@ -1,31 +1,28 @@
-import React, { useEffect } from 'react';
-import { connect, ConnectedProps } from 'react-redux';
+import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
+import Typo from '@material-ui/core/Typography';
+import { Container } from '@material-ui/core';
+import { sIndex } from './style';
 
-import * as users from '../../store/actions/users';
+import Carousel from './Carousel';
 
 const Landing = (props: IProps) => {
-  useEffect(() => {
-    props.fetchUsers();
-  }, []);
+  const c = sIndex();
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center' }}>Landing Page</h1>
-      {!!props.users.length &&
-        props.users.map((u, i) => <div key={i}>{u.email}</div>)}
+      <Carousel />
+      <Container>
+        <div className={c.content1Container}>
+          <Typo variant="h3">PennyWise</Typo>
+          <div>Stuck on the Money-Go-Round?</div>
+          <div>Bring your money and budgeting back in balance</div>
+        </div>
+      </Container>
     </div>
   );
 };
 
-const mapState = (state) => ({
-  users: state.users.all.data
-});
-const mapDispatch = { ...users };
-const connector = connect(mapState, mapDispatch);
-type PropsFromRedux = ConnectedProps<typeof connector>;
+interface IProps extends RouteComponentProps {}
 
-interface IProps extends PropsFromRedux, RouteComponentProps {}
-
-export default connector(Landing);
- 
+export default Landing;
