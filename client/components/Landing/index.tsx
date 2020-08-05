@@ -37,11 +37,6 @@ const Landing = (props: IProps) => {
   );
 };
 
-interface IPerson {
-  name: string;
-  mobile: number;
-}
-
 interface IProps extends RouteComponentProps {}
 
 export default Landing;
