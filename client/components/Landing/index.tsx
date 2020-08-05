@@ -5,6 +5,7 @@ import { Container } from '@material-ui/core';
 import { sIndex } from './style';
 
 import Carousel from './Carousel';
+import Footer from '../Footer';
 
 const arr = [`landing/S1.jpg`, `landing/slide2.jpg`, `landing/slide3.jpg`];
 
@@ -33,10 +34,11 @@ const Landing = (props: IProps) => {
           </div>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 };
 
-interface IProps extends RouteComponentProps {}
+interface IProps extends RouteComponentProps { }
 
 export default Landing;
