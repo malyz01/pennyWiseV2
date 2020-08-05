@@ -16,14 +16,21 @@ const Carousel = (props: IProps) => {
     infinite: true,
     speed: 2500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    ...props.setting
   };
+
+  const ratio: [number, number] = props.ratio || [3, 1];
 
   return (
     <div className={c.mainContainer}>
       <Slider {...settings}>
         {props.images.map((img) => (
-          <Image key={img} aspectRatio={3 / 1} src={`/assets/images/${img}`} />
+          <Image
+            key={img}
+            aspectRatio={ratio[0] / ratio[1]}
+            src={`/assets/images/${img}`}
+          />
         ))}
       </Slider>
     </div>
@@ -33,6 +40,7 @@ const Carousel = (props: IProps) => {
 interface IProps {
   images: string[];
   setting?: ICarouselSettings;
+  ratio?: [number, number];
 }
 
 export default Carousel;
