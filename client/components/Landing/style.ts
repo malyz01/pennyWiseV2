@@ -6,10 +6,10 @@ export const sIndex = makeStyles((theme: Theme) =>
       textAlign: 'center'
     },
     contentContainer1: {
-      textAlign: 'center'
+      margin: '4em auto'
     },
     contentContainer2: {
-      textAlign: 'center'
+      margin: '4em auto'
     }
   })
 );

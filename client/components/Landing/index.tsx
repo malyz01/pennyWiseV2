@@ -20,7 +20,15 @@ const Landing = (props: IProps) => {
         </div>
         <div className={c.contentContainer2}>
           <Typo variant="h3">Service we provide</Typo>
-          <div></div>
+          <div
+            style={{
+              height: '300px',
+              width: '100%',
+              border: '1px solid black'
+            }}
+          >
+            Replace with a carousel
+          </div>
         </div>
       </Container>
     </div>
