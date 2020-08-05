@@ -22,12 +22,7 @@ const Landing = (props: IProps) => {
         </div>
         <div className={c.contentContainer2}>
           <Typo variant="h3">Service we provide</Typo>
-          <div
-            style={{
-              width: '80%',
-              margin: '1em auto'
-            }}
-          >
+          <div className={c.imageContainer}>
             <Carousel
               images={contentImages}
               setting={{ fade: false, arrows: true }}

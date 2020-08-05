@@ -10,6 +10,10 @@ export const sIndex = makeStyles((theme: Theme) =>
     },
     contentContainer2: {
       margin: '4em auto'
+    },
+    imageContainer: {
+      width: '80%',
+      margin: '1em auto'
     }
   })
 );
