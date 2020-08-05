@@ -6,22 +6,41 @@ import { sIndex } from './style';
 
 import Carousel from './Carousel';
 
+const arr = [`landing/S1.jpg`, `landing/slide2.jpg`, `landing/slide3.jpg`];
+
 const Landing = (props: IProps) => {
   const c = sIndex();
 
   return (
     <div>
-      <Carousel />
-      <Container>
-        <div className={c.content1Container}>
+      <Carousel arr={arr} />
+      <Container className={c.mainContainer}>
+        <div className={c.contentContainer1}>
           <Typo variant="h3">PennyWise</Typo>
-          <div>Stuck on the Money-Go-Round?</div>
-          <div>Bring your money and budgeting back in balance</div>
+          <p>Stuck on the Money-Go-Round?</p>
+          <p>Bring your money and budgeting back in balance</p>
+        </div>
+        <div className={c.contentContainer2}>
+          <Typo variant="h3">Service we provide</Typo>
+          <div
+            style={{
+              height: '300px',
+              width: '100%',
+              border: '1px solid black'
+            }}
+          >
+            Replace with a carousel
+          </div>
         </div>
       </Container>
     </div>
   );
 };
+
+interface IPerson {
+  name: string;
+  mobile: number;
+}
 
 interface IProps extends RouteComponentProps {}
 
