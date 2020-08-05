@@ -6,17 +6,14 @@ import { sIndex } from './style';
 
 import Carousel from './Carousel';
 
-const images = [
-  `landing/slide1.jpg`,
-  `landing/slide2.jpg`,
-  `landing/slide3.jpg`
-];
+const headerImages = Array.from('123').map((n) => `landing/slide${n}.jpg`);
+const contentImages = Array.from('12345').map((n) => `slideContent${n}.jpg`);
 
 const Landing = (props: IProps) => {
   const c = sIndex();
   return (
     <div>
-      <Carousel images={images} />
+      <Carousel images={headerImages} />
       <Container className={c.mainContainer}>
         <div className={c.contentContainer1}>
           <Typo variant="h3">PennyWise</Typo>
@@ -27,12 +24,15 @@ const Landing = (props: IProps) => {
           <Typo variant="h3">Service we provide</Typo>
           <div
             style={{
-              height: '300px',
-              width: '100%',
-              border: '1px solid black'
+              width: '80%',
+              margin: '1em auto'
             }}
           >
-            Replace with a carousel
+            <Carousel
+              images={contentImages}
+              setting={{ fade: false, arrows: true }}
+              ratio={[2, 1]}
+            />
           </div>
         </div>
       </Container>
