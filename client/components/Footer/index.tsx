@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 import { Container } from '@material-ui/core';
-import { sIndex } from './style'
+import { sIndex } from './style';
 
-const Footer = () => {
-  const f = sIndex()
+const Footer = (props: IProps) => {
+  const f = sIndex();
 
   return (
     <Container className={f.mainContainer}>
@@ -12,6 +13,8 @@ const Footer = () => {
     </div>
     </Container>
   )
-}
+};
 
-export default Footer
+interface IProps extends RouteComponentProps { }
+
+export default Footer;
