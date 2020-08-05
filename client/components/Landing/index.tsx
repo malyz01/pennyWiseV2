@@ -12,11 +12,15 @@ const Landing = (props: IProps) => {
   return (
     <div>
       <Carousel />
-      <Container>
-        <div className={c.content1Container}>
+      <Container className={c.mainContainer}>
+        <div className={c.contentContainer1}>
           <Typo variant="h3">PennyWise</Typo>
-          <div>Stuck on the Money-Go-Round?</div>
-          <div>Bring your money and budgeting back in balance</div>
+          <p>Stuck on the Money-Go-Round?</p>
+          <p>Bring your money and budgeting back in balance</p>
+        </div>
+        <div className={c.contentContainer2}>
+          <Typo variant="h3">Service we provide</Typo>
+          <div></div>
         </div>
       </Container>
     </div>
