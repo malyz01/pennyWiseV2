@@ -28,3 +28,4 @@ type PropsFromRedux = ConnectedProps<typeof connector>;
 interface IProps extends PropsFromRedux, RouteComponentProps {}
 
 export default connector(Landing);
+ 
