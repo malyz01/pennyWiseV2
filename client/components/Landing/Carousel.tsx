@@ -3,10 +3,12 @@ import Slider from 'react-slick';
 import Image from 'material-ui-image';
 import { sCarousel } from './style';
 
+import { ICarouselSettings } from './interface';
+
 const Carousel = (props: IProps) => {
   const c = sCarousel();
 
-  const settings = {
+  const settings: ICarouselSettings = {
     autoplay: true,
     autoplaySpeed: 5000,
     fade: true,
@@ -20,8 +22,8 @@ const Carousel = (props: IProps) => {
   return (
     <div className={c.mainContainer}>
       <Slider {...settings}>
-        {props.arr.map((img) => (
-          <Image aspectRatio={14 / 7} src={`/assets/images/${img}`} />
+        {props.images.map((img) => (
+          <Image key={img} aspectRatio={3 / 1} src={`/assets/images/${img}`} />
         ))}
       </Slider>
     </div>
@@ -29,7 +31,8 @@ const Carousel = (props: IProps) => {
 };
 
 interface IProps {
-  arr: string[];
+  images: string[];
+  setting?: ICarouselSettings;
 }
 
 export default Carousel;

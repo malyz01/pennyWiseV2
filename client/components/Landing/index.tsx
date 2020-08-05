@@ -6,14 +6,13 @@ import { sIndex } from './style';
 
 import Carousel from './Carousel';
 
-const arr = [`landing/S1.jpg`, `landing/slide2.jpg`, `landing/slide3.jpg`];
+const images = [`landing/S1.jpg`, `landing/slide2.jpg`, `landing/slide3.jpg`];
 
 const Landing = (props: IProps) => {
   const c = sIndex();
-
   return (
     <div>
-      <Carousel arr={arr} />
+      <Carousel images={images} />
       <Container className={c.mainContainer}>
         <div className={c.contentContainer1}>
           <Typo variant="h3">PennyWise</Typo>
@@ -36,11 +35,6 @@ const Landing = (props: IProps) => {
     </div>
   );
 };
-
-interface IPerson {
-  name: string;
-  mobile: number;
-}
 
 interface IProps extends RouteComponentProps {}
 
