@@ -3,6 +3,8 @@ import { RouteComponentProps } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 import { sIndex } from './style';
 
+import FooterItems from './FooterItems'
+
 const Footer = (props: IProps) => {
   const f = sIndex();
 
@@ -10,7 +12,8 @@ const Footer = (props: IProps) => {
     <Container className={f.mainContainer}>
       <div>
         Footer
-    </div>
+      </div>
+      <FooterItems />
     </Container>
   )
 };
