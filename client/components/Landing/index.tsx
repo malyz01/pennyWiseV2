@@ -6,7 +6,11 @@ import { sIndex } from './style';
 
 import Carousel from './Carousel';
 
-const images = [`landing/S1.jpg`, `landing/slide2.jpg`, `landing/slide3.jpg`];
+const images = [
+  `landing/slide1.jpg`,
+  `landing/slide2.jpg`,
+  `landing/slide3.jpg`
+];
 
 const Landing = (props: IProps) => {
   const c = sIndex();
