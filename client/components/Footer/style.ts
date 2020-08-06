@@ -3,7 +3,8 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 export const sIndex = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      textAlign: 'center'
+      textAlign: 'center',
+      backgroundColor: '#00A6A4'
     }
   })
 );

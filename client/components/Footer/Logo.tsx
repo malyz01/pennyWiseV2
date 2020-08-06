@@ -8,6 +8,7 @@ const Logo = () => {
 
   return (
     <div className={f.mainContainer}>
+      {/* Need to fix this as the logo disappears when there is no text */}
       Logo
       <Image aspectRatio={1 / 1} src="/assets/images/pennywise_logo.png" alt="PennyWise Logo" />
     </div>
