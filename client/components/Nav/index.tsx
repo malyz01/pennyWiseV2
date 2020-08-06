@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import { sIndex } from './styles';
 
 import Logo from './Logo';
+import Menu from './Menu';
 
 const index = () => {
   const c = sIndex();
@@ -11,8 +12,7 @@ const index = () => {
       <div className={c.mainContainer}>
         <Logo />
         <div className={c.menuContainer}>
-          <div className={c.menu}>Budget Tools</div>
-          <div className={c.menu}>Signed in as: John Doe</div>
+          <Menu />
         </div>
       </div>
     </Container>

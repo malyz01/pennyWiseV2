@@ -33,3 +33,12 @@ export const sLogo = makeStyles((theme: Theme) =>
     typo: {}
   })
 );
+
+export const sMenu = makeStyles((theme: Theme) =>
+  createStyles({
+    btn: {
+      minWidth: '94px !important',
+      marginLeft: '1em !important'
+    }
+  })
+);

@@ -2,6 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import Image from 'material-ui-image';
 import { sCarousel } from './style';
+import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
 import { ICarouselSettings } from './interface';
 

@@ -5,7 +5,6 @@ import { Container } from '@material-ui/core';
 import { sIndex } from './style';
 
 import Carousel from './Carousel';
-import Animate from '../Animate';
 
 const headerImages = Array.from('123').map((n) => `landing/slide${n}.jpg`);
 const contentImages = Array.from('12345').map((n) => `slideContent${n}.jpg`);
@@ -26,12 +25,11 @@ const Landing = (props: IProps) => {
           <div className={c.imageContainer}>
             <Carousel
               images={contentImages}
-              setting={{ fade: false, arrows: true }}
+              setting={{ fade: false, speed: 1000 }}
               ratio={[2, 1]}
             />
           </div>
         </div>
-        <Animate />
       </Container>
     </div>
   );
