@@ -4,7 +4,8 @@ export const sIndex = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       textAlign: 'center',
-      backgroundColor: '#00A6A4'
+      backgroundColor: '#00A6A4',
+      padding: '4em'
     }
   })
 );
