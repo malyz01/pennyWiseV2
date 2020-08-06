@@ -1,8 +1,12 @@
 import React from 'react';
 
+import { sIndex } from './style';
+
 const FooterItems = () => {
+  const f = sIndex();
+
   return (
-    <div>
+    <div className={f.conetentContainer1}>
       <div>
         ABOUT
     </div>
