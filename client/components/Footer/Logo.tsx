@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'material-ui-image';
 
 import { sLogo } from './style';
 
@@ -7,7 +8,8 @@ const Logo = () => {
 
   return (
     <div className={f.mainContainer}>
-      <img src='/assets/images/pennywise_logo.png' alt='PennyWise Logo' />
+      Logo
+      <Image aspectRatio={1 / 1} src="/assets/images/pennywise_logo.png" alt="PennyWise Logo" />
     </div>
   )
 };

@@ -12,9 +12,6 @@ export const sLogo = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       textAlign: 'center'
-    },
-    logoImage: {
-      maxWidth: '5px'
     }
   })
 );
