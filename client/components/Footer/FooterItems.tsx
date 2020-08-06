@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { sIndex, sFooterItems } from './style';
+import { sFooterItems } from './style';
 
 const FooterItems = () => {
   const f = sFooterItems();

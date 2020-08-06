@@ -1,10 +1,19 @@
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
-import { NavigationFullscreenExit } from 'material-ui/svg-icons';
 
 export const sIndex = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       textAlign: 'center'
+    }
+  })
+);
+
+export const sLogo = makeStyles((theme: Theme) =>
+  createStyles({
+    mainContainer: {
+      textAlign: 'center',
+      top: '1em',
+      left: '1em'
     }
   })
 );
