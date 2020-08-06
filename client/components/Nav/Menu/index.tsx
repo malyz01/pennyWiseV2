@@ -1,11 +1,20 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { sMenu } from './styles';
+import { sIndex } from './styles';
 
 const Menu = () => {
-  const c = sMenu();
+  const c = sIndex();
   return (
-    <div>
+    <div className={c.mainContainer}>
+      <div
+        style={{
+          display: 'inline-flex',
+          alignSelf: 'flex-end',
+          height: '100%'
+        }}
+      >
+        asd
+      </div>
       <Button className={c.btn} variant="contained" color="primary">
         Login
       </Button>
