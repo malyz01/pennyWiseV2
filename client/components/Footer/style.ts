@@ -14,6 +14,14 @@ export const sLogo = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       textAlign: 'center'
+    },
+    penny: {
+      fontSize: '1.5em',
+      fontFamily: 'Boogaloo',
+      color: '#d1a435'
+    },
+    wise: {
+      color: '#d1a435'
     }
   })
 );
