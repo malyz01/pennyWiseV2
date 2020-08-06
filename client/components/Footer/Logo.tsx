@@ -7,7 +7,7 @@ const Logo = () => {
 
   return (
     <div className={f.mainContainer}>
-      Logo
+      <img src='/assets/images/pennywise_logo.png' alt='PennyWise Logo' />
     </div>
   )
 };

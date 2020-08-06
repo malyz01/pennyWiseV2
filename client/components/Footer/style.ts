@@ -11,9 +11,10 @@ export const sIndex = makeStyles((theme: Theme) =>
 export const sLogo = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      textAlign: 'center',
-      top: '1em',
-      left: '1em'
+      textAlign: 'center'
+    },
+    logoImage: {
+      maxWidth: '5px'
     }
   })
 );
