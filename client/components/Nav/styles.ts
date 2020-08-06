@@ -6,6 +6,7 @@ export const sIndex = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'flex-end',
+      margin: '1.5em 0 1em',
       padding: '1em 0',
       height: 50
     },
@@ -30,5 +31,14 @@ export const sLogo = makeStyles((theme: Theme) =>
       marginRight: '1em'
     },
     typo: {}
+  })
+);
+
+export const sMenu = makeStyles((theme: Theme) =>
+  createStyles({
+    btn: {
+      minWidth: '94px !important',
+      marginLeft: '1em !important'
+    }
   })
 );

@@ -3,6 +3,7 @@ import { connect, ConnectedProps } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 
+import * as I from './interface';
 import * as users from '../../store/actions/users';
 
 const Landing = (props: IProps) => {
@@ -14,7 +15,9 @@ const Landing = (props: IProps) => {
     <div>
       <Container>
         {!!props.users.length &&
-          props.users.map((u, i) => <div key={i}>{u.email}</div>)}
+          props.users.map((u: I.IUser, i: number) => (
+            <div key={i}>{u.email}</div>
+          ))}
       </Container>
     </div>
   );
