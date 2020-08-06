@@ -5,9 +5,9 @@ import Menu, { MenuProps } from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
+import IncomeIcon from '@material-ui/icons/LocalAtm';
+import ExpenseIcon from '@material-ui/icons/Receipt';
+import BudgetIcon from '@material-ui/icons/RateReview';
 
 const StyledMenu = withStyles({
   paper: {
@@ -32,7 +32,6 @@ const StyledMenu = withStyles({
 
 const StyledMenuItem = withStyles((theme) => ({
   root: {
-    // display: 'inline-flex',
     '&:focus': {
       backgroundColor: theme.palette.primary.main,
       '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
@@ -58,10 +57,11 @@ const View = () => {
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
+        variant="outlined"
         color="primary"
         onClick={handleClick}
       >
-        View Tools
+        <strong>View Tools</strong>
       </Button>
       <StyledMenu
         id="customized-menu"
@@ -72,21 +72,21 @@ const View = () => {
       >
         <StyledMenuItem>
           <ListItemIcon>
-            <SendIcon fontSize="small" />
+            <IncomeIcon fontSize="small" />
           </ListItemIcon>
           <ListItemText primary="Income" />
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemIcon>
-            <DraftsIcon fontSize="small" />
+            <ExpenseIcon fontSize="small" />
           </ListItemIcon>
           <ListItemText primary="Expense" />
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemIcon>
-            <InboxIcon fontSize="small" />
+            <BudgetIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText primary="Budget" />
+          <ListItemText primary="Budget Tools" />
         </StyledMenuItem>
       </StyledMenu>
     </div>

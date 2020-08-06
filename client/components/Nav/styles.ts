@@ -6,7 +6,6 @@ export const sIndex = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'flex-end',
-      margin: '1.5em 0 1em',
       padding: '1em 0',
       height: '100%'
     }
