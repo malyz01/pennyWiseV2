@@ -3,7 +3,7 @@ import { RouteComponentProps } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 import { sIndex } from './style';
 
-import FooterItems from './FooterItems'
+import FooterItems from './FooterItems';
 
 const Footer = (props: IProps) => {
   const f = sIndex();

@@ -6,8 +6,8 @@ const Logo = () => {
   const f = sLogo();
 
   return (
-    <div>
-
+    <div className={f.mainContainer}>
+      Logo
     </div>
   )
 };

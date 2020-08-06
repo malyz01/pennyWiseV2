@@ -1,12 +1,14 @@
 import React from 'react';
 
 import { sFooterItems } from './style';
+import Logo from './Logo';
 
 const FooterItems = () => {
   const f = sFooterItems();
 
   return (
     <div className={f.mainContainer}>
+      <Logo />
       <div>
         ABOUT
         <div>
@@ -30,7 +32,7 @@ const FooterItems = () => {
         <div>
           <p>Enspiral Dev Academy</p>
         </div>
-    </div>
+      </div>
       <div>
         AWARDS
         <div>
@@ -38,7 +40,7 @@ const FooterItems = () => {
           <p>Most Innovative Team 2020</p>
           <p>"Maximum Big Don Energy!" - Don Smith</p>
         </div>
-    </div>
+      </div>
     </div>
   )
 };
