@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Nav from './_Nav';
+import Nav from './Nav';
+import Footer from './Footer';
 import Landing from './_Landing';
-import Footer from './_Footer';
 
 const App = () => {
   return (
