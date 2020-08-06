@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { sIndex } from './style';
+import { sIndex, sFooterItems } from './style';
 
 const FooterItems = () => {
-  const f = sIndex();
+  const f = sFooterItems();
 
   return (
-    <div className={f.conetentContainer1}>
+    <div className={f.mainContainer}>
       <div>
         ABOUT
         <div>

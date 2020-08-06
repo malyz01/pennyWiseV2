@@ -5,8 +5,13 @@ export const sIndex = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       textAlign: 'center'
-    },
-    conetentContainer1: {
+    }
+  })
+);
+
+export const sFooterItems = makeStyles((theme: Theme) =>
+  createStyles({
+    mainContainer: {
       display: 'flex',
       justifyContent: 'space-between',
       padding: '0 1em'
