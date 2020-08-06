@@ -1,11 +1,14 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { sMenu } from './styles';
+import { sIndex } from './styles';
+
+import View from './View';
 
 const Menu = () => {
-  const c = sMenu();
+  const c = sIndex();
   return (
-    <div>
+    <div className={c.mainContainer}>
+      <View />
       <Button className={c.btn} variant="contained" color="primary">
         Login
       </Button>

@@ -11,9 +11,7 @@ const index = () => {
     <Container>
       <div className={c.mainContainer}>
         <Logo />
-        <div className={c.menuContainer}>
-          <Menu />
-        </div>
+        <Menu />
       </div>
     </Container>
   );

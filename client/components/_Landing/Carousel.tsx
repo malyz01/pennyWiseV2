@@ -17,6 +17,7 @@ const Carousel = (props: IProps) => {
     dots: true,
     infinite: true,
     speed: 2500,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     ...props.setting
