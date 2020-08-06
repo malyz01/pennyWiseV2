@@ -10,9 +10,6 @@ const Footer = (props: IProps) => {
 
   return (
     <Container className={f.mainContainer}>
-      <div>
-        Footer
-      </div>
       <FooterItems />
     </Container>
   )
