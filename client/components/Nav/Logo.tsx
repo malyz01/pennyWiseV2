@@ -6,6 +6,7 @@ import { sLogo } from './styles';
 
 const Logo = () => {
   const c = sLogo();
+
   return (
     <ButtonBase className={c.mainContainer}>
       <div className={c.logoContainer}>
