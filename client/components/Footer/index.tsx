@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 import { sIndex } from './style';
 
@@ -17,9 +17,9 @@ const Footer = (props: IProps) => {
         <SocialLogos />
       </Container>
     </div>
-  )
+  );
 };
 
-interface IProps extends RouteComponentProps { }
+interface IProps extends RouteComponentProps {}
 
-export default Footer;
+export default withRouter(Footer);
