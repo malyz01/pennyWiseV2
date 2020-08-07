@@ -6,12 +6,12 @@ import { sIndex } from './style';
 import FooterItems from './FooterItems';
 
 const Footer = (props: IProps) => {
-  const f = sIndex();
+  const c = sIndex();
 
   return (
-    <Container className={f.mainContainer}>
+    <Container className={c.mainContainer}>
       <FooterItems />
-      <hr className={f.footerLine}/>
+      <hr className={c.footerLine}/>
     </Container>
   )
 };

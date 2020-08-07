@@ -4,10 +4,10 @@ import { sFooterItems } from './style';
 import Logo from './Logo';
 
 const FooterItems = () => {
-  const f = sFooterItems();
+  const c = sFooterItems();
 
   return (
-    <div className={f.mainContainer}>
+    <div className={c.mainContainer}>
       <Logo />
       <div>
         ABOUT
