@@ -43,9 +43,13 @@ export const sFooterItems = makeStyles((theme: Theme) =>
 export const sSocialLogos = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      display: 'flex',
       color: 'white',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      marginTop: '1em'
+    },
+    icon: {
+      fontSize: '3em',
+      margin: '0 0.5em'
     }
   })
 );

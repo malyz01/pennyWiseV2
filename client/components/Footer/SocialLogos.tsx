@@ -11,10 +11,10 @@ const SocialLogos = () => {
 
   return (
     <div className={c.mainContainer}>
-      <FacebookIcon />
-      <InstagramIcon />
-      <TwitterIcon />
-      <YouTubeIcon />
+      <FacebookIcon className={c.icon}/>
+      <InstagramIcon className={c.icon}/>
+      <TwitterIcon className={c.icon}/>
+      <YouTubeIcon className={c.icon}/>
     </div>
   )
 };
