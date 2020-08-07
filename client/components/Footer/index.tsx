@@ -4,6 +4,7 @@ import { Container } from '@material-ui/core';
 import { sIndex } from './style';
 
 import FooterItems from './FooterItems';
+import SocialLogos from './SocialLogos';
 
 const Footer = (props: IProps) => {
   const c = sIndex();
@@ -13,6 +14,7 @@ const Footer = (props: IProps) => {
       <Container>
         <FooterItems />
         <hr className={c.footerLine} />
+        <SocialLogos />
       </Container>
     </div>
   )
