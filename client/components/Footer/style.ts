@@ -16,7 +16,8 @@ export const sIndex = makeStyles((theme: Theme) =>
 export const sLogo = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      textAlign: 'center'
+      justifyContent: 'center',
+      width: '6em'
     },
     penny: {
       fontSize: '1.5em',
@@ -34,7 +35,23 @@ export const sFooterItems = makeStyles((theme: Theme) =>
     mainContainer: {
       display: 'flex',
       justifyContent: 'space-between',
-      padding: '0 1em'
+      color: 'white',
+      padding: '0 1em',
+      marginBottom: '2em'
+    }
+  })
+);
+
+export const sSocialLogos = makeStyles((theme: Theme) =>
+  createStyles({
+    mainContainer: {
+      color: 'white',
+      justifyContent: 'center',
+      marginTop: '2em'
+    },
+    icon: {
+      fontSize: '3em',
+      margin: '0 0.5em'
     }
   })
 );

@@ -10,38 +10,30 @@ const FooterItems = () => {
     <div className={c.mainContainer}>
       <Logo />
       <div>
-        ABOUT
-        <div>
-          <p>About Us</p>
-          <p>Help</p>
-        </div>
+        <p>ABOUT</p>
+        <div>About Us</div>
+        <div>Help</div>
       </div>
       <div>
-        CONTACT US
-        <div>
-          <p>Matt Uy</p>
-          <p>Jimmi Meredith</p>
-          <p>Chris Alba</p>
-          <p>Raymond Leung</p>
-          <p>Lucas Santana</p>
-          <p>David Dumolo</p>
-        </div>
+        <p>CONTACT US</p>
+        <div>Matt Uy</div>
+        <div>Jimmi Meredith</div>
+        <div>Chris Alba</div>
+        <div>Raymond Leung</div>
+        <div>Lucas Santana</div>
+        <div>David Dumolo</div>
       </div>
       <div>
-        COURSE
-        <div>
-          <p>Enspiral Dev Academy</p>
-        </div>
+        <p>COURSE</p>
+        <div>Enspiral Dev Academy</div>
       </div>
       <div>
-        AWARDS
-        <div>
-          <p>Best Budgeting App 2020</p>
-          <p>Most Innovative Team 2020</p>
-          <p>"Maximum Big Don Energy!" - Don Smith</p>
-        </div>
+        <p>AWARDS</p>
+        <div>Best Budgeting App 2020</div>
+        <div>Most Innovative Team 2020</div>
+        <div>"Maximum Big Don Energy!" - Don Smith</div>
       </div>
-    </div>
+    </div >
   )
 };
 

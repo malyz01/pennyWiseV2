@@ -9,7 +9,7 @@ const Logo = () => {
   return (
     <div className={c.mainContainer}>
       <Image aspectRatio={1 / 1} color='none' src="/assets/images/pennywise_logo.png" alt="PennyWise Logo" />
-      <p className={c.penny}>Penny<span className={c.wise}>Wise</span></p>
+      <div className={c.penny}>Penny<span className={c.wise}>Wise</span></div>
     </div>
   )
 };
