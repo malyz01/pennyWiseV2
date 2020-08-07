@@ -18,6 +18,7 @@ const index = () => {
             Add Income
           </Button>
         </section>
+        <section>Insert table here</section>
       </Container>
     </div>
   );
