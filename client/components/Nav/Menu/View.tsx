@@ -57,7 +57,6 @@ const View = () => {
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
-        variant="outlined"
         color="primary"
         onClick={handleClick}
       >
