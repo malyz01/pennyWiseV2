@@ -1,14 +1,20 @@
 import React from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typo from '@material-ui/core/Typography';
 import Image from 'material-ui-image';
 import { sLogo } from './styles';
 
-const Logo = () => {
+const Logo = (props: IProps) => {
   const c = sLogo();
 
+  const onLogoClick = () => {
+    if (props.location.pathname === '/') return;
+    props.history.push('/');
+  };
+
   return (
-    <ButtonBase className={c.mainContainer}>
+    <ButtonBase onClick={onLogoClick} className={c.mainContainer}>
       <div className={c.logoContainer}>
         <Image
           aspectRatio={1 / 1}
@@ -26,4 +32,6 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+interface IProps extends RouteComponentProps {}
+
+export default withRouter(Logo);
