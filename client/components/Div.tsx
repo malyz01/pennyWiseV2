@@ -4,8 +4,10 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 const sDiv = makeStyles((theme: Theme) =>
   createStyles({
     divContainer: {
+      display: 'flex',
       margin: '1em 0',
-      border: '1px solid black'
+      border: '1px solid black',
+      width: 'auto'
     }
   })
 );
