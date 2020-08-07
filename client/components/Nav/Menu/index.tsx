@@ -2,16 +2,21 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
 import withWidth, { WithWidth } from '@material-ui/core/withWidth';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 import { sIndex } from './styles';
 
 import View from './View';
-import Div from '../../Div';
 
 const Menu = (props: IProps) => {
   const c = sIndex();
   return (
     <div className={c.mainContainer}>
-      <Div>Test</Div>
+      <Hidden mdUp>
+        <IconButton aria-label="menu">
+          <MenuIcon />
+        </IconButton>
+      </Hidden>
       <Hidden smDown>
         <View />
         <Button className={c.btn} variant="contained" color="primary">
