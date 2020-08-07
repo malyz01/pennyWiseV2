@@ -35,7 +35,8 @@ export const sFooterItems = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'space-between',
       color: 'white',
-      padding: '0 1em'
+      padding: '0 1em',
+      marginBottom: '2em'
     }
   })
 );
@@ -45,7 +46,7 @@ export const sSocialLogos = makeStyles((theme: Theme) =>
     mainContainer: {
       color: 'white',
       justifyContent: 'center',
-      marginTop: '1em'
+      marginTop: '2em'
     },
     icon: {
       fontSize: '3em',
