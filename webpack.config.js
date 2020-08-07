@@ -1,5 +1,5 @@
-const path = require('path')
-const Dotenv = require('dotenv-webpack')
+const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
@@ -39,6 +39,9 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: './server/public'
+    contentBase: './server/public',
+    proxy: {
+      '*': 'http://localhost:3000'
+    }
   }
-}
+};
