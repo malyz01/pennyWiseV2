@@ -34,6 +34,7 @@ export const sFooterItems = makeStyles((theme: Theme) =>
     mainContainer: {
       display: 'flex',
       justifyContent: 'space-between',
+      color: 'white',
       padding: '0 1em'
     }
   })
