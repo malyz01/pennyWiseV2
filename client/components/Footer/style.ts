@@ -6,6 +6,9 @@ export const sIndex = makeStyles((theme: Theme) =>
       textAlign: 'center',
       backgroundColor: '#00A6A4',
       padding: '4em'
+    },
+    footerLine: {
+      width: '66%'
     }
   })
 );
