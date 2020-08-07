@@ -1,14 +1,13 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
-import withWidth, { WithWidth } from '@material-ui/core/withWidth';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { sIndex } from './styles';
 
 import View from './View';
 
-const Menu = (props: IProps) => {
+const Menu = () => {
   const c = sIndex();
   return (
     <div className={c.mainContainer}>
@@ -30,6 +29,4 @@ const Menu = (props: IProps) => {
   );
 };
 
-interface IProps extends WithWidth {}
-
-export default withWidth()(Menu);
+export default Menu;
