@@ -16,7 +16,7 @@ export const sIndex = makeStyles((theme: Theme) =>
 export const sLogo = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      textAlign: 'center',
+      justifyContent: 'center',
       width: '6em'
     },
     penny: {
