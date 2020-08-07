@@ -1,5 +1,6 @@
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 
+// TODO transition animation
 export const sIndex = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
@@ -21,8 +22,17 @@ export const sLogo = makeStyles((theme: Theme) =>
     },
     logoContainer: {
       width: 50,
-      marginRight: '1em'
+      marginRight: '1em',
+      [theme.breakpoints.down(400)]: {
+        width: 40
+      }
     },
-    typo: {}
+    typo: {
+      fontFamily: "'Boogaloo' !important",
+      fontSize: '3em !important',
+      [theme.breakpoints.down(400)]: {
+        fontSize: '2em !important'
+      }
+    }
   })
 );

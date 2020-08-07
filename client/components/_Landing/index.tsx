@@ -12,23 +12,10 @@ const contentImages = Array.from('12345').map((n) => `slideContent${n}.jpg`);
 
 const Landing = (props: IProps) => {
   const c = sIndex();
-  const [headerCarousel, setHeaderCarousel] = useState<[number, number]>([
-    3,
-    1
-  ]);
-  const [contentCarousel, setContentCarousel] = useState<[number, number]>([
-    2,
-    1
-  ]);
 
-  useEffect(() => {
-    if (props.width === 'xs') setHeaderCarousel([2, 1]);
-  }, [headerCarousel]);
-
-  console.log(props.width);
   return (
     <div>
-      <Carousel images={headerImages} ratio={headerCarousel} />
+      <Carousel images={headerImages} />
       <Container className={c.mainContainer}>
         <div className={c.contentContainer1}>
           <Typo variant="h3">PennyWise</Typo>
@@ -41,7 +28,7 @@ const Landing = (props: IProps) => {
             <Carousel
               images={contentImages}
               setting={{ fade: false, speed: 1000 }}
-              ratio={contentCarousel}
+              ratio={[2, 1]}
             />
           </div>
         </div>

@@ -9,12 +9,16 @@ const Logo = () => {
   return (
     <ButtonBase className={c.mainContainer}>
       <div className={c.logoContainer}>
-        <Image aspectRatio={1 / 1} color='none' src="/assets/images/pennywise_logo.png" />
+        <Image
+          aspectRatio={1 / 1}
+          color="none"
+          src="/assets/images/pennywise_logo.png"
+        />
       </div>
-      <Typo className={c.typo} variant="h3" color="primary">
+      <Typo className={c.typo} color="primary">
         Penny
       </Typo>
-      <Typo className={c.typo} variant="h3" color="secondary">
+      <Typo className={c.typo} color="secondary">
         Wise
       </Typo>
     </ButtonBase>
