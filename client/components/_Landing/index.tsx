@@ -35,6 +35,6 @@ const Landing = (props: IProps) => {
   );
 };
 
-interface IProps extends RouteComponentProps {}
+interface IProps extends RouteComponentProps { }
 
 export default Landing;
