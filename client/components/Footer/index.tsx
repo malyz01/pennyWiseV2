@@ -9,10 +9,12 @@ const Footer = (props: IProps) => {
   const c = sIndex();
 
   return (
-    <Container className={c.mainContainer}>
-      <FooterItems />
-      <hr className={c.footerLine}/>
-    </Container>
+    <div className={c.mainContainer}>
+      <Container>
+        <FooterItems />
+        <hr className={c.footerLine} />
+      </Container>
+    </div>
   )
 };
 

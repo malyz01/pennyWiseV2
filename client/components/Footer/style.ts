@@ -38,3 +38,13 @@ export const sFooterItems = makeStyles((theme: Theme) =>
     }
   })
 );
+
+export const sSocialLogos = makeStyles((theme: Theme) =>
+  createStyles({
+    mainContainer: {
+      display: 'flex',
+      color: 'white',
+      justifyContent: 'center'
+    }
+  })
+);
