@@ -2,34 +2,15 @@ import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import Menu, { MenuProps } from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import IncomeIcon from '@material-ui/icons/LocalAtm';
 import ExpenseIcon from '@material-ui/icons/Receipt';
 import BudgetIcon from '@material-ui/icons/RateReview';
+import { sView } from './styles';
 
-const StyledMenu = withStyles({
-  paper: {
-    border: '1px solid #d3d4d5',
-    marginTop: '.5em'
-  }
-})((props: MenuProps) => (
-  <Menu
-    elevation={0}
-    getContentAnchorEl={null}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'center'
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'center'
-    }}
-    {...props}
-  />
-));
+import CustomMenu from '../../CustomMenu';
 
 const StyledMenuItem = withStyles((theme) => ({
   root: {
@@ -43,6 +24,7 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem);
 
 const View = (props: IProps) => {
+  const c = sView();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -56,11 +38,11 @@ const View = (props: IProps) => {
   const onItemClick = (menuItem: MenuItem) => () => {
     if (props.location.pathname === menuItem) return;
     props.history.push(`/${menuItem}`);
-    setAnchorEl(null);
+    handleClose();
   };
 
   return (
-    <div style={{ display: 'inline-flex' }}>
+    <div className={c.mainContainer}>
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
@@ -69,12 +51,13 @@ const View = (props: IProps) => {
       >
         <strong>View Tools</strong>
       </Button>
-      <StyledMenu
+      <CustomMenu
         id="customized-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
+        classes={{ paper: c.menuPaper }}
       >
         <StyledMenuItem onClick={onItemClick('income')}>
           <ListItemIcon>
@@ -94,7 +77,7 @@ const View = (props: IProps) => {
           </ListItemIcon>
           <ListItemText primary="Budget Tools" />
         </StyledMenuItem>
-      </StyledMenu>
+      </CustomMenu>
     </div>
   );
 };
