@@ -1,4 +1,5 @@
 import React from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Menu, { MenuProps } from '@material-ui/core/Menu';
@@ -12,7 +13,7 @@ import BudgetIcon from '@material-ui/icons/RateReview';
 const StyledMenu = withStyles({
   paper: {
     border: '1px solid #d3d4d5',
-    marginTop: '1em'
+    marginTop: '.5em'
   }
 })((props: MenuProps) => (
   <Menu
@@ -41,7 +42,7 @@ const StyledMenuItem = withStyles((theme) => ({
   }
 }))(MenuItem);
 
-const View = () => {
+const View = (props: IProps) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -49,6 +50,12 @@ const View = () => {
   };
 
   const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const onItemClick = (menuItem: MenuItem) => () => {
+    if (props.location.pathname === menuItem) return;
+    props.history.push(`/${menuItem}`);
     setAnchorEl(null);
   };
 
@@ -69,19 +76,19 @@ const View = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <StyledMenuItem>
+        <StyledMenuItem onClick={onItemClick('income')}>
           <ListItemIcon>
             <IncomeIcon fontSize="small" />
           </ListItemIcon>
           <ListItemText primary="Income" />
         </StyledMenuItem>
-        <StyledMenuItem>
+        <StyledMenuItem onClick={onItemClick('expense')}>
           <ListItemIcon>
             <ExpenseIcon fontSize="small" />
           </ListItemIcon>
           <ListItemText primary="Expense" />
         </StyledMenuItem>
-        <StyledMenuItem>
+        <StyledMenuItem onClick={onItemClick('budget')}>
           <ListItemIcon>
             <BudgetIcon fontSize="small" />
           </ListItemIcon>
@@ -92,4 +99,8 @@ const View = () => {
   );
 };
 
-export default View;
+type MenuItem = 'income' | 'expense' | 'budget';
+
+interface IProps extends RouteComponentProps {}
+
+export default withRouter(View);
