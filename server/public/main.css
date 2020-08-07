@@ -4,3 +4,7 @@ body {
   background-color: #faf6f6;
   scroll-behavior: smooth;
 }
+
+section {
+  margin: 2em auto;
+}

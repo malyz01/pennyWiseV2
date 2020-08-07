@@ -10,7 +10,7 @@ import ExpenseIcon from '@material-ui/icons/Receipt';
 import BudgetIcon from '@material-ui/icons/RateReview';
 import { sView } from './styles';
 
-import CustomMenu from '../../CustomMenu';
+import CustomMenu from '../../../components/CustomMenu';
 
 const StyledMenuItem = withStyles((theme) => ({
   root: {

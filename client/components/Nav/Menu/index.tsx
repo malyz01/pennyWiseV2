@@ -10,7 +10,7 @@ import View from './View';
 const Menu = () => {
   const c = sIndex();
   return (
-    <div className={c.mainContainer}>
+    <div>
       <Hidden mdUp>
         <IconButton aria-label="menu">
           <MenuIcon />
