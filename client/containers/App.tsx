@@ -8,6 +8,7 @@ import Income from '../containers/_Income';
 import Expense from '../containers/_Expense';
 import Budget from '../containers/_Budget';
 import Animate from './Animate';
+import Sample from '../components/UserSample';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route exact path="/expense" component={Expense} />
         <Route exact path="/budget" component={Budget} />
         <Route exact path="/animate" component={Animate} />
+        <Route exact path="/sample" component={Sample} />
       </Switch>
       <Footer />
     </Router>
