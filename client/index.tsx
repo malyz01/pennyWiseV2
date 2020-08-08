@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { ThemeProvider } from '@material-ui/core/styles';
 
-import App from './components/App';
+import App from './containers/App';
 import reducers from './store/reducers';
 import theme from './Theme';
 

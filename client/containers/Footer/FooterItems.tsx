@@ -18,10 +18,6 @@ const FooterItems = () => {
         <p>CONTACT US</p>
         <div>Matt Uy</div>
         <div>Jimmi Meredith</div>
-        <div>Chris Alba</div>
-        <div>Raymond Leung</div>
-        <div>Lucas Santana</div>
-        <div>David Dumolo</div>
       </div>
       <div>
         <p>COURSE</p>

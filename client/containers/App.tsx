@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Nav from './Nav';
-// import Footer from './Footer';
+import Footer from './Footer';
 import Landing from './_Landing';
 import Income from '../containers/_Income';
 import Expense from '../containers/_Expense';
@@ -20,7 +20,7 @@ const App = () => {
         <Route exact path="/budget" component={Budget} />
         <Route exact path="/animate" component={Animate} />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 };
