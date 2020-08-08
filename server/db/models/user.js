@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
 
-  // TODO add setter for password
+  // TODO add setter for password, and beforeUpdate hook
   User.init(
     {
       id: {
