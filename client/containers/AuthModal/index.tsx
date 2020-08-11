@@ -5,6 +5,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+
 import Transition from '../../components/Transition';
 
 const AuthModal = () => {
@@ -21,7 +22,7 @@ const AuthModal = () => {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Slide in alert dialog
+        Slide in Modal
       </Button>
       <Dialog
         open={open}
@@ -31,21 +32,24 @@ const AuthModal = () => {
         aria-labelledby="Auth Form"
         aria-describedby=""
       >
-        <DialogTitle id="alert-dialog-slide-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
+        <DialogTitle>Auth Form</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
-            Let Google help apps determine location. This means sending
-            anonymous location data to Google, even when no apps are running.
+          l
+          <DialogContentText>
+            <p>
+              <input type="text" />
+            </p>
+            <p>
+              <input type="text" />
+            </p>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
-            Disagree
+            Submit
           </Button>
           <Button onClick={handleClose} color="primary">
-            Agree
+            Cancel
           </Button>
         </DialogActions>
       </Dialog>
