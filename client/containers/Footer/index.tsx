@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Container } from '@material-ui/core';
-import { sIndex } from './style';
+import { sIndex } from './styles';
 
 import FooterItems from './FooterItems';
 import SocialLogos from './SocialLogos';

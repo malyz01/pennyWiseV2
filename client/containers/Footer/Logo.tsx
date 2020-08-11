@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'material-ui-image';
 
-import { sLogo } from './style';
+import { sLogo } from './styles';
 
 const Logo = () => {
   const c = sLogo();
