@@ -38,6 +38,9 @@ export const sFooterItems = makeStyles((theme: Theme) =>
       color: 'white',
       padding: '0 1em',
       marginBottom: '2em'
+    },
+    awards: {
+      zIndex: 2
     }
   })
 );
