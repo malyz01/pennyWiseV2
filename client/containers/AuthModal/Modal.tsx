@@ -20,11 +20,12 @@ const AuthModal = () => {
   return (
     <div>
       <button type="button" onClick={handleOpen}>
-        react-spring
+        Click
       </button>
       <Modal
-        aria-labelledby="spring-modal-title"
-        aria-describedby="spring-modal-description"
+        disableAutoFocus={true}
+        aria-labelledby="Auth Form"
+        aria-describedby="Auth login or register form"
         className={classes.modal}
         open={open}
         onClose={handleClose}
