@@ -11,7 +11,7 @@ import Budget from '../containers/_Budget';
 import Profile from '../containers/_Profile';
 import Animate from './Animate';
 import Sample from '../components/UserSample';
-import { sApp } from './App';
+import { sApp } from './styles';
 
 const App = () => {
   const c = sApp();

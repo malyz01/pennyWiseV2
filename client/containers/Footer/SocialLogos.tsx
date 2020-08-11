@@ -4,7 +4,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 
-import { sSocialLogos } from './style'
+import { sSocialLogos } from './styles'
 
 const SocialLogos = () => {
   const c = sSocialLogos();

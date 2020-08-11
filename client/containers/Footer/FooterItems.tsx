@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { sFooterItems } from './style';
+import { sFooterItems } from './styles';
 import Logo from './Logo';
 
 const FooterItems = () => {
