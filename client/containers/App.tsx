@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Image from 'material-ui-image';
 
 import Nav from './Nav';
 import Footer from './Footer';
@@ -23,6 +24,7 @@ const App = () => {
         <Route exact path="/sample" component={Sample} />
       </Switch>
       <Footer />
+      <Image color='none' src="/assets/images/landing/fern.png" alt="Fern" />
     </Router>
   );
 };
