@@ -29,7 +29,7 @@ const App = () => {
         </Switch>
         <Footer />
         <div className={c.fern}>
-          <Image aspectRatio={1 / 1.5} color='none' src="/assets/images/landing/fern.png" alt="Fern" />
+          <Image aspectRatio={1 / 1.25} color='none' src="/assets/images/landing/fern.png" alt="Fern" />
         </div>
       </div>
     </Router>
