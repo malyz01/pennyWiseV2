@@ -18,16 +18,20 @@ const App = () => {
   return (
     <Router>
       <Nav />
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/income" component={Income} />
-        <Route exact path="/expense" component={Expense} />
-        <Route exact path="/budget" component={Budget} />
-        <Route exact path="/animate" component={Animate} />
-        <Route exact path="/sample" component={Sample} />
-      </Switch>
-      <Footer />
-      <Image color='none' className={c.fern} src="/assets/images/landing/fern.png" alt="Fern" />
+      <div className={c.mainContainer}>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/income" component={Income} />
+          <Route exact path="/expense" component={Expense} />
+          <Route exact path="/budget" component={Budget} />
+          <Route exact path="/animate" component={Animate} />
+          <Route exact path="/sample" component={Sample} />
+        </Switch>
+        <Footer />
+        <div className={c.fern}>
+          <Image aspectRatio={1 / 1.5} color='none' src="/assets/images/landing/fern.png" alt="Fern" />
+        </div>
+      </div>
     </Router>
   );
 };

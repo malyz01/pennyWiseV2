@@ -23,13 +23,13 @@ const FooterItems = () => {
         <p>COURSE</p>
         <div>Enspiral Dev Academy</div>
       </div>
-      <div>
+      <div className={c.awards}>
         <p>AWARDS</p>
         <div>Best Budgeting App 2020</div>
         <div>Most Innovative Team 2020</div>
         <div>"Maximum Big Don Energy!" - Don Smith</div>
       </div>
-    </div >
+    </div>
   )
 };
 
