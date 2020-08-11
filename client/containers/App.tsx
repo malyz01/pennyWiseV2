@@ -10,8 +10,11 @@ import Expense from '../containers/_Expense';
 import Budget from '../containers/_Budget';
 import Animate from './Animate';
 import Sample from '../components/UserSample';
+import { sApp } from './App'
 
 const App = () => {
+  const c = sApp();
+
   return (
     <Router>
       <Nav />
@@ -24,7 +27,7 @@ const App = () => {
         <Route exact path="/sample" component={Sample} />
       </Switch>
       <Footer />
-      <Image color='none' src="/assets/images/landing/fern.png" alt="Fern" />
+      <Image color='none' className={c.fern} src="/assets/images/landing/fern.png" alt="Fern" />
     </Router>
   );
 };
