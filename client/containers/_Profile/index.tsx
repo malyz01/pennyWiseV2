@@ -9,7 +9,11 @@ const index = () => {
   return (
     <div className={c.mainContainer}>
       <Container>
-        WELCOME TO YOUR PROFILE
+      <section>
+          <h1>Welcome to your Profile</h1>
+          <hr />
+          <p>Manage your account and profile settings</p>
+        </section>
       </Container>
     </div>
   );
