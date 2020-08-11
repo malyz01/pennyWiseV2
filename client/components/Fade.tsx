@@ -18,6 +18,7 @@ const Fade = React.forwardRef<HTMLDivElement, FadeProps>(function Fade(
     from: { opacity: 0 },
     to: { opacity: open ? 1 : 0 },
     config,
+    delay: 100,
     onStart: () => {
       if (open && onEnter) {
         onEnter();
