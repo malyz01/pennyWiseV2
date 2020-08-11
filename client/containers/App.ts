@@ -11,7 +11,10 @@ export const sApp = makeStyles((theme: Theme) =>
       bottom: '0',
       position: 'absolute',
       zIndex: 1,
-      opacity: '66%'
+      opacity: '66%',
+      [theme.breakpoints.down(850)]: {
+        display: 'none'
+      }
     }
   })
 );
