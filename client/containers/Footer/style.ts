@@ -5,7 +5,10 @@ export const sIndex = makeStyles((theme: Theme) =>
     mainContainer: {
       textAlign: 'center',
       backgroundColor: '#00A6A4',
-      padding: '4em'
+      padding: '4em',
+      [theme.breakpoints.down(850)]: {
+        padding: '.8em'
+      }
     },
     footerLine: {
       width: '66%'
@@ -17,7 +20,10 @@ export const sLogo = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       justifyContent: 'center',
-      width: '6em'
+      width: '6em',
+      [theme.breakpoints.down(850)]: {
+        display: 'none'
+      }
     },
     penny: {
       fontSize: '1.5em',
@@ -37,10 +43,19 @@ export const sFooterItems = makeStyles((theme: Theme) =>
       justifyContent: 'space-between',
       color: 'white',
       padding: '0 1em',
-      marginBottom: '2em'
+      marginBottom: '2em',
+      [theme.breakpoints.down(1000)]: {
+        fontSize: '.8em'
+      },
+      [theme.breakpoints.down(850)]: {
+        flexDirection: 'column'
+      }
     },
-    awards: {
-      zIndex: 2
+    footerItemContainer: {
+      zIndex: 2,
+      [theme.breakpoints.down(850)]: {
+        margin: '1em auto'
+      }
     }
   })
 );
