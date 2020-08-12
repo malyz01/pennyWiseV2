@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Image from 'material-ui-image';
 
-import { sCardTop } from './styles'
+import { sCardTop } from './styles';
 
 const CardTop = () => {
 const c = sCardTop();
