@@ -5,8 +5,13 @@ export const sIndex = makeStyles((theme: Theme) =>
     mainContainer: {
       textAlign: 'center',
       minHeight: 600
-    },
-    profileCard: {
+    }
+  })
+);
+
+export const sProfileCard = makeStyles((theme: Theme) =>
+  createStyles({
+    mainContainer: {
       border: 'solid 1px black',
       minHeight: '15em'
     }
