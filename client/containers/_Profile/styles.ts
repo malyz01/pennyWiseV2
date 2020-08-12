@@ -21,3 +21,12 @@ export const sProfileCard = makeStyles((theme: Theme) =>
     }
   })
 );
+
+export const sCardTop = makeStyles((theme: Theme) =>
+  createStyles({
+    button: {
+      minWidth: '94px !important',
+      marginLeft: '1em !important'
+    }
+  })
+);
