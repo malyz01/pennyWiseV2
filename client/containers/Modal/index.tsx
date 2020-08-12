@@ -8,7 +8,9 @@ import * as modalActions from '../../store/actions/modal';
 
 const AuthModal = (props) => {
   const { name, open, setModal } = props;
-  const handleClose = () => {};
+  const handleClose = () => {
+    setModal('', false);
+  };
 
   return (
     <Dialog
