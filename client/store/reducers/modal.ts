@@ -1,12 +1,12 @@
 import { Types } from '../types';
 
 const INITIAL: IPayload = {
-  name: null,
+  name: '',
   open: false
 };
 
-interface IPayload {
-  name: string | null;
+export interface IPayload {
+  name: string;
   open: boolean;
 }
 
