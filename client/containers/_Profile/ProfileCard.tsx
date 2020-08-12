@@ -10,6 +10,7 @@ const ProfileCard = () => {
   return (
     <div className={c.mainContainer}>
       <CardTop />
+      <hr className={c.line}/>
       <CardBottom />
     </div>
   )

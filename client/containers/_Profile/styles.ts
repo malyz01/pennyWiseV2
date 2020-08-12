@@ -13,7 +13,11 @@ export const sProfileCard = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       border: 'solid 1px black',
+      borderRadius: '2.5em',
       minHeight: '15em'
+    },
+    line: {
+      width: '90%'
     }
   })
 );
