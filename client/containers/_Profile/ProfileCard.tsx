@@ -7,7 +7,7 @@ const ProfileCard = () => {
 
   return (
     <div className={c.mainContainer}>
-
+      PROFILE CARD
     </div>
   )
 };

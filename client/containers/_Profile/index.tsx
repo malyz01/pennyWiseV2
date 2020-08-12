@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 
 import { sIndex } from './styles';
+import ProfileCard from './ProfileCard';
 
 const index = () => {
   const c = sIndex();
@@ -14,11 +15,7 @@ const index = () => {
           <hr />
           <p>Manage your account and profile settings</p>
         </section>
-        <section>
-          <div className={c.profileCard}>
-            PROFILE CARD
-          </div>
-        </section>
+        <ProfileCard />
       </Container>
     </div>
   );
