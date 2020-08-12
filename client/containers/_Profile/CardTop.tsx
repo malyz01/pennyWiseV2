@@ -30,17 +30,3 @@ const c = sCardTop();
 };
 
 export default CardTop;
-
-
-{/* <div className='profileBody'>
-<div>
-  <div className='fullNameAndEmail'>
-    <div className='profileFullName'>{user.fullName}</div>
-    <div className='profileEmail'>{user.email}</div>
-  </div>
-  <div className='editAndSubButton'>
-    <button onClick={handleOnClick} className='ui blue button'>edit profile</button>
-  </div>
-</div>
-<img className="profileAvatar" src={user.avatar} alt="user avatar image"/>
-</div> */}
