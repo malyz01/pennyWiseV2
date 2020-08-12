@@ -27,6 +27,11 @@ export const sCardTop = makeStyles((theme: Theme) =>
     button: {
       minWidth: '94px !important',
       marginLeft: '1em !important'
+    },
+    avatar: {
+      width: '10em',
+      height: '10em',
+      marginLeft: '75%'
     }
   })
 );

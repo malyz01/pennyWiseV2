@@ -21,7 +21,7 @@ const c = sCardTop();
         </Button>
       </div>
 
-      <div>
+      <div className={c.avatar}>
       <Image aspectRatio={1 / 1} color='none' src="/assets/images/avatar.png" alt="Avatar" />
       </div>
 
