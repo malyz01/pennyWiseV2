@@ -5,8 +5,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-
-import Transition from '../../components/Transition';
+import Collapse from '@material-ui/core/Collapse';
 
 const AuthModal = () => {
   const [open, setOpen] = React.useState(false);
@@ -26,7 +25,7 @@ const AuthModal = () => {
       </Button>
       <Dialog
         open={open}
-        TransitionComponent={Transition}
+        TransitionComponent={Collapse}
         keepMounted
         onClose={handleClose}
         aria-labelledby="Auth Form"
@@ -34,15 +33,7 @@ const AuthModal = () => {
       >
         <DialogTitle>Auth Form</DialogTitle>
         <DialogContent>
-          l
-          <DialogContentText>
-            <p>
-              <input type="text" />
-            </p>
-            <p>
-              <input type="text" />
-            </p>
-          </DialogContentText>
+          <DialogContentText>FORM</DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
