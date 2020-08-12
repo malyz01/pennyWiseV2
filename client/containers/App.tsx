@@ -13,11 +13,14 @@ import Animate from './Animate';
 import Sample from '../components/UserSample';
 import { sApp } from './styles';
 
+import Modal from './Modal';
+
 const App = () => {
   const c = sApp();
 
   return (
     <Router>
+      <Modal />
       <Nav />
       <div className={c.mainContainer}>
         <Switch>
@@ -31,7 +34,12 @@ const App = () => {
         </Switch>
         <Footer />
         <div className={c.fern}>
-          <Image aspectRatio={1 / 1.25} color='none' src="/assets/images/landing/fern.png" alt="Fern" />
+          <Image
+            aspectRatio={1 / 1.25}
+            color="none"
+            src="/assets/images/landing/fern.png"
+            alt="Fern"
+          />
         </div>
       </div>
     </Router>
