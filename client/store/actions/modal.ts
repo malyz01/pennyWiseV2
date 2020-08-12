@@ -1,7 +1,6 @@
 import { Types } from '../types';
-import { IPayload } from '../reducers/modal';
 
-export const setModal = (payload: IPayload) => ({
+export const setModal = (name: string, open: boolean) => ({
   type: Types.SET_MODAL,
-  payload
+  payload: { name, open }
 });
