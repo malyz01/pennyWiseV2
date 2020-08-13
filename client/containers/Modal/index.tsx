@@ -6,9 +6,8 @@ import Login from './Login';
 import Register from './Register';
 import { IRootState } from '../../store/reducers';
 import * as modalActions from '../../store/actions/modal';
-import { $CombinedState } from 'redux';
 
-const AuthModal = (props: IProps) => {
+const Modal = (props: IProps) => {
   const { name, open, setModal } = props;
   const handleClose = () => {
     setModal('', false);
@@ -37,4 +36,4 @@ const connector = connect(mapState, mapDispatch);
 type PropsFromRedux = ConnectedProps<typeof connector>;
 interface IProps extends PropsFromRedux {}
 
-export default connector(AuthModal);
+export default connector(Modal);
