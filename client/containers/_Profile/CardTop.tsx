@@ -13,9 +13,6 @@ const CardTop = () => {
       <div>
         <h1 className={c.name}>FULL NAME</h1>
         <h3 className={c.email}>EMAIL</h3>
-      </div>
-
-      <div>
         <Button className={c.button} variant="contained" color="primary">
           Edit Profile
         </Button>
