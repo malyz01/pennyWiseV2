@@ -24,6 +24,9 @@ export const sProfileCard = makeStyles((theme: Theme) =>
 
 export const sCardTop = makeStyles((theme: Theme) =>
   createStyles({
+    mainContainer: {
+      display: 'flex'
+    },
     button: {
       minWidth: '94px !important',
       marginLeft: '1em !important'
