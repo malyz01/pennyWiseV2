@@ -1,11 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, ConnectedProps } from 'react-redux';
 import Dialog from '@material-ui/core/Dialog';
 
 import Login from './Login';
+import Register from './Register';
+import { IRootState } from '../../store/reducers';
 import * as modalActions from '../../store/actions/modal';
+import { $CombinedState } from 'redux';
 
-const AuthModal = (props) => {
+const AuthModal = (props: IProps) => {
   const { name, open, setModal } = props;
   const handleClose = () => {
     setModal('', false);
@@ -19,14 +22,19 @@ const AuthModal = (props) => {
       aria-labelledby="Modal"
     >
       {name === 'Login' && <Login />}
+      {name === 'Register' && <Register />}
     </Dialog>
   );
 };
 
-const mapState = (state) => ({
+const mapState = (state: IRootState) => ({
   name: state.modal.name,
   open: state.modal.open
 });
-const mapProps = { ...modalActions };
+const mapDispatch = { ...modalActions };
+const connector = connect(mapState, mapDispatch);
 
-export default connect(mapState, mapProps)(AuthModal);
+type PropsFromRedux = ConnectedProps<typeof connector>;
+interface IProps extends PropsFromRedux {}
+
+export default connector(AuthModal);
