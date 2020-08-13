@@ -3,8 +3,12 @@ import error from './error';
 import users from './users';
 import modal from './modal';
 
-export default combineReducers({
+const rootReducer = combineReducers({
   error,
   users,
   modal
 });
+
+export type IRootState = ReturnType<typeof rootReducer>;
+
+export default rootReducer;
