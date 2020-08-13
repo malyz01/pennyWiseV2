@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Dialog from '@material-ui/core/Dialog';
-import Collapse from '@material-ui/core/Collapse';
 
 import Login from './Login';
 import * as modalActions from '../../store/actions/modal';
@@ -14,13 +13,12 @@ const AuthModal = (props) => {
 
   return (
     <Dialog
-      open={props.open}
-      TransitionComponent={Collapse}
+      open={open}
       keepMounted
       onClose={handleClose}
       aria-labelledby="Modal"
     >
-      {name === 'login' && <Login />}
+      {name === 'Login' && <Login />}
     </Dialog>
   );
 };
