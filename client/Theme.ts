@@ -19,8 +19,20 @@ const theme = createMuiTheme({
     },
     secondary: {
       main: '#d1a435'
+    },
+    neutral: {
+      main: '#faf6f6'
     }
   }
 });
+
+declare module '@material-ui/core/styles/createPalette' {
+  interface Palette {
+    neutral: Palette['primary'];
+  }
+  interface PaletteOptions {
+    neutral: PaletteOptions['primary'];
+  }
+}
 
 export default theme;
