@@ -27,6 +27,12 @@ export const sCardTop = makeStyles((theme: Theme) =>
     mainContainer: {
       display: 'flex'
     },
+    name: {
+      marginTop: '2em',
+      fontSize: '2em',
+      letterSpacing: '0.25em',
+      marginBottom: '2em'
+    },
     button: {
       minWidth: '94px !important',
       marginLeft: '1em !important'

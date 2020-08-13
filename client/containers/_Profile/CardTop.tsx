@@ -5,13 +5,13 @@ import Image from 'material-ui-image';
 import { sCardTop } from './styles';
 
 const CardTop = () => {
-const c = sCardTop();
+  const c = sCardTop();
 
   return (
-    <div>
+    <div className={c.mainContainer}>
 
       <div>
-        <h1>FULL NAME</h1>
+        <h1 className={c.name}>FULL NAME</h1>
         <h3>EMAIL</h3>
       </div>
 
@@ -22,7 +22,7 @@ const c = sCardTop();
       </div>
 
       <div className={c.avatar}>
-      <Image aspectRatio={1 / 1} color='none' src="/assets/images/avatar.png" alt="Avatar" />
+        <Image aspectRatio={1 / 1} color='none' src="/assets/images/avatar.png" alt="Avatar" />
       </div>
 
     </div>
