@@ -10,9 +10,9 @@ const CardTop = () => {
   return (
     <div className={c.mainContainer}>
 
-      <div>
+      <div className={c.details}>
         <h1 className={c.name}>FULL NAME</h1>
-        <h3 className={c.email}>EMAIL</h3>
+        <h3 className={c.email}>EMAIL@EMAIL.COM</h3>
         <Button className={c.button} variant="contained" color="primary">
           Edit Profile
         </Button>

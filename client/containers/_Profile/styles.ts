@@ -27,6 +27,9 @@ export const sCardTop = makeStyles((theme: Theme) =>
     mainContainer: {
       display: 'flex'
     },
+    details: {
+      width: '50%'
+    },
     name: {
       marginTop: '2em',
       fontSize: '2em',
@@ -44,8 +47,7 @@ export const sCardTop = makeStyles((theme: Theme) =>
     },
     avatar: {
       width: '10em',
-      height: '10em',
-      marginLeft: '75%'
+      height: '10em'
     }
   })
 );
