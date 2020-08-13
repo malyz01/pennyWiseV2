@@ -1,30 +1,25 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import { sLogin } from './styles';
 
 const Login = () => {
+  const c = sLogin();
   const handleClose = () => {
     alert('action creator');
   };
 
   return (
-    <>
-      <DialogTitle>Auth Form</DialogTitle>
-      <DialogContent>
-        <DialogContentText>LOGIN FORM</DialogContentText>
-      </DialogContent>
-      <DialogActions>
+    <div className={c.mainContainer}>
+      Testing pit
+      <div>
         <Button onClick={handleClose} color="primary">
           Submit
         </Button>
         <Button onClick={handleClose} color="primary">
           Cancel
         </Button>
-      </DialogActions>
-    </>
+      </div>
+    </div>
   );
 };
 
