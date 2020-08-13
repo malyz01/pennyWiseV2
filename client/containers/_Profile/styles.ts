@@ -33,6 +33,11 @@ export const sCardTop = makeStyles((theme: Theme) =>
       letterSpacing: '0.25em',
       marginBottom: '2em'
     },
+    email: {
+      fontSize: '1em',
+      marginBottom: '2em',
+      letterSpacing: '0.25em'
+    },
     button: {
       minWidth: '94px !important',
       marginLeft: '1em !important'

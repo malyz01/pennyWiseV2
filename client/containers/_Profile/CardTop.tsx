@@ -12,7 +12,7 @@ const CardTop = () => {
 
       <div>
         <h1 className={c.name}>FULL NAME</h1>
-        <h3>EMAIL</h3>
+        <h3 className={c.email}>EMAIL</h3>
       </div>
 
       <div>
