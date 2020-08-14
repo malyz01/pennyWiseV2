@@ -1,8 +1,14 @@
 import { combineReducers } from 'redux';
-import users from './users';
 import error from './error';
+import users from './users';
+import modal from './modal';
 
-export default combineReducers({
+const rootReducer = combineReducers({
   error,
-  users
+  users,
+  modal
 });
+
+export type IRootState = ReturnType<typeof rootReducer>;
+
+export default rootReducer;

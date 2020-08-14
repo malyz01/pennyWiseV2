@@ -1,5 +1,6 @@
 export enum Types {
   SET_ERROR,
   FETCH_USER,
-  FETCH_USERS
+  FETCH_USERS,
+  SET_MODAL
 }
