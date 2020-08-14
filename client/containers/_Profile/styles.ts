@@ -51,3 +51,11 @@ export const sCardTop = makeStyles((theme: Theme) =>
     }
   })
 );
+
+export const sCardBottom = makeStyles((theme: Theme) =>
+  createStyles({
+    mainContainer: {
+      display: 'flex'
+    }
+  })
+);
