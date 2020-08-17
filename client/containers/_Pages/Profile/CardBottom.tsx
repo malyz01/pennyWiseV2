@@ -19,6 +19,9 @@ const CardBottom = () => {
         Manage Your Budget
       </Button>
       </div>
+      <div>
+        <h3>An Overview of your Finances</h3>
+      </div>
     </div>
   )
 };
