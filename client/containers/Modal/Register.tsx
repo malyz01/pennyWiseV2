@@ -7,7 +7,12 @@ import { sLogin } from './styles';
 
 const Login = () => {
   const c = sLogin();
-  const [val, setVal] = useState({ email: '', password: '' });
+  const [val, setVal] = useState({
+    fullname: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  });
 
   const handleClose = () => {};
 
@@ -35,6 +40,16 @@ const Login = () => {
           margin="normal"
           fullWidth
           variant="outlined"
+          label="Full name"
+          name="fullname"
+          type="text"
+          value={val.fullname}
+          onChange={handleOnChange}
+        />
+        <TextField
+          margin="normal"
+          fullWidth
+          variant="outlined"
           label="Email"
           name="email"
           type="text"
@@ -49,6 +64,16 @@ const Login = () => {
           name="password"
           type="password"
           value={val.password}
+          onChange={handleOnChange}
+        />
+        <TextField
+          margin="normal"
+          fullWidth
+          variant="outlined"
+          label="Confirm Password"
+          name="confirmPassword"
+          type="password"
+          value={val.confirmPassword}
           onChange={handleOnChange}
         />
         <div className={c.btnContainer}>
