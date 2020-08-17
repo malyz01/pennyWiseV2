@@ -55,10 +55,13 @@ export const sCardTop = makeStyles((theme: Theme) =>
 export const sCardBottom = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      
+
     },
     overviewTable: {
-
+      display: 'flex',
+      border: 'solid 1px black',
+      borderRadius: '2em',
+      width: '25%'
     },
     totalKeys: {
 
