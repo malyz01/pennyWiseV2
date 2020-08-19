@@ -64,10 +64,10 @@ export const sCardBottom = makeStyles((theme: Theme) =>
       width: '25%'
     },
     totalKeys: {
-
+     
     },
     totalValues: {
-
+  
     }
   })
 );
