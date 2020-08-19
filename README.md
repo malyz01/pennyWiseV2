@@ -7,3 +7,4 @@
 - Express JS
 - Postgres (Sequelize)
 - GraphQL
+- Material UI
