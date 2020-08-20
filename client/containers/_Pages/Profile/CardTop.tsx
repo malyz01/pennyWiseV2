@@ -11,8 +11,8 @@ const CardTop = () => {
     <div className={c.mainContainer}>
 
       <div className={c.details}>
-        <h1 className={c.name}>FULL NAME</h1>
-        <h3 className={c.email}>EMAIL@EMAIL.COM</h3>
+        <div className={c.name}>FULL NAME</div>
+        <div className={c.email}>EMAIL@EMAIL.COM</div>
         <Button className={c.button} variant="contained" color="primary">
           Edit Profile
         </Button>

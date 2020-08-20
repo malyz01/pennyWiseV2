@@ -12,9 +12,11 @@ export const sIndex = makeStyles((theme: Theme) =>
 export const sProfileCard = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
+      maxWidth: '1000px',
       border: 'solid 1px black',
       borderRadius: '2.5em',
-      minHeight: '15em'
+      minHeight: '15em',
+      margin: '2em auto 5em'
     },
     line: {
       width: '90%'
@@ -25,25 +27,24 @@ export const sProfileCard = makeStyles((theme: Theme) =>
 export const sCardTop = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      display: 'flex'
+      display: 'flex',
+      justifyContent: 'space-between',
+      padding: '2em 5em'
     },
     details: {
-      width: '50%'
+      textAlign: 'left'
     },
     name: {
-      marginTop: '2em',
       fontSize: '2em',
       letterSpacing: '0.25em',
-      marginBottom: '2em'
+      marginBottom: '1em'
     },
     email: {
       fontSize: '1em',
-      marginBottom: '2em',
-      letterSpacing: '0.25em'
+      letterSpacing: '0.25em',
+      marginBottom: '2em'
     },
     button: {
-      minWidth: '94px !important',
-      marginLeft: '1em !important'
     },
     avatar: {
       width: '10em',
@@ -64,10 +65,10 @@ export const sCardBottom = makeStyles((theme: Theme) =>
       width: '25%'
     },
     totalKeys: {
-     
+
     },
     totalValues: {
-  
+
     }
   })
 );
