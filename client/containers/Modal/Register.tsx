@@ -1,11 +1,14 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { connect, ConnectedProps } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Typo from '@material-ui/core/Typography';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { sLogin } from './styles';
 
-const Login = () => {
+import * as modalActions from '../../store/actions/modal';
+
+const Register = (props: IProps) => {
   const c = sLogin();
   const [val, setVal] = useState({
     fullname: '',
@@ -14,7 +17,9 @@ const Login = () => {
     confirmPassword: ''
   });
 
-  const handleClose = () => {};
+  const handleClose = () => {
+    props.setModal('', false);
+  };
 
   const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setVal({ ...val, [e.target.name]: e.target.value });
@@ -31,7 +36,7 @@ const Login = () => {
       <div className={c.headerContainer}>
         <AccountCircleIcon color="primary" className={c.icon} />
         <Typo color="primary" variant="h3">
-          Login
+          Register
         </Typo>
       </div>
       <hr />
@@ -89,4 +94,10 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapDispatch = { ...modalActions };
+const connector = connect(null, mapDispatch);
+
+type PropsFromRedux = ConnectedProps<typeof connector>;
+interface IProps extends PropsFromRedux {}
+
+export default connector(Register);
