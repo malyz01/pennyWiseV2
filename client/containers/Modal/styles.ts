@@ -4,7 +4,7 @@ export const sLogin = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       minHeight: 100,
-      minWidth: 200,
+      maxWidth: 350,
       padding: '2em 2em 2.5em',
       background: theme.palette.neutral.main
     },
@@ -15,6 +15,11 @@ export const sLogin = makeStyles((theme: Theme) =>
     },
     icon: {
       fontSize: 50
+    },
+    btnContainer: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      marginTop: '.5em'
     }
   })
 );

@@ -7,7 +7,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { sIndex } from './styles';
 
 import View from './View';
-// import {IRootState} from '../../../store/reducers'
 import * as modalAction from '../../../store/actions/modal';
 
 const Menu = (props: IProps) => {

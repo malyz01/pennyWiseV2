@@ -4,7 +4,10 @@
     "commonjs": true,
     "es6": true
   },
-  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -15,7 +18,9 @@
     },
     "ecmaVersion": 2018
   },
-  "plugins": ["react"],
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "node/no-unpublished-require": false,
     "no-unused-vars": "off",
