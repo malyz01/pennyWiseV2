@@ -4,7 +4,8 @@ export const sIndex = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       textAlign: 'center',
-      minHeight: 600
+      minHeight: 600,
+      paddingBottom: '5em'
     }
   })
 );
@@ -12,14 +13,15 @@ export const sIndex = makeStyles((theme: Theme) =>
 export const sProfileCard = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-      maxWidth: '1000px',
+      maxWidth: '800px',
       border: 'solid 1px black',
       borderRadius: '2.5em',
       minHeight: '15em',
-      margin: '2em auto 5em'
+      margin: '2em auto',
+      padding: '2em 5em'
     },
     line: {
-      width: '90%'
+      margin: '2em 0'
     }
   })
 );
@@ -28,8 +30,7 @@ export const sCardTop = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
       display: 'flex',
-      justifyContent: 'space-between',
-      padding: '2em 5em'
+      justifyContent: 'space-between'
     },
     details: {
       textAlign: 'left'
@@ -56,19 +57,39 @@ export const sCardTop = makeStyles((theme: Theme) =>
 export const sCardBottom = makeStyles((theme: Theme) =>
   createStyles({
     mainContainer: {
-
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center'
+    },
+    cardButtons: {
+      display: 'flex',
+      flexDirection: 'column'
+    },
+    button: {
+      margin: '0.5em 0'
+    },
+    overview: {
+      width: '50%'
+    },
+    overviewHeading: {
+      fontSize: '1.5em',
+      marginBottom: '1em'
     },
     overviewTable: {
       display: 'flex',
-      border: 'solid 1px black',
+      border: `solid 2px ${theme.palette.primary.main}`,
       borderRadius: '2em',
-      width: '25%'
+      backgroundColor: theme.palette.primary.main
     },
     totalKeys: {
-
+      width: '50%',
+      backgroundColor: theme.palette.neutral.main,
+      borderRadius: '2em 0 0 2em',
     },
     totalValues: {
-
+      width: '50%',
+      color: 'white',
+      borderRadius: '0 2em 2em 0'
     }
   })
 );
