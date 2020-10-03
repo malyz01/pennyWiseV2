@@ -19,6 +19,10 @@ const App = () => {
       <div className={c.mainContainer}>
         <Switch>
           <Route exact path="/" component={Page.Home} />
+          <Route exact path="/profile" component={Page.Home} />
+          <Route exact path="/income" component={Page.Home} />
+          <Route exact path="/expense" component={Page.Home} />
+          <Route exact path="/budget" component={Page.Home} />
         </Switch>
         <Footer />
         <div className={c.fern}>
