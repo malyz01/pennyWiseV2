@@ -4,7 +4,7 @@ import useStyles from './styles/profile';
 
 import Card from '../containers/Profile/Card';
 
-const index = () => {
+const Profile = () => {
   const c = useStyles();
 
   return (
@@ -21,4 +21,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Profile;
