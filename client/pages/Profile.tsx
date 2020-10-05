@@ -6,6 +6,13 @@ import Image from 'material-ui-image';
 import Button from '@material-ui/core/Button';
 import useStyles from './styles/profile';
 
+const data = [
+  { name: 'total Income', amount: 1200 },
+  { name: 'total Expense', amount: 366.14 },
+  { name: 'total Budget', amount: 833.86 },
+  { name: 'total Goals', amount: 6 }
+];
+
 const Profile = () => {
   const c = useStyles();
 
@@ -19,7 +26,7 @@ const Profile = () => {
 
       <section>
         <Paper className={c.paper} elevation={8}>
-          <Box display="flex" justifyContent="space-around">
+          <Box className={c.box}>
             <div className={c.container}>
               <h3>FULL NAME</h3>
               <h5>EMAIL@EMAIL.COM</h5>
@@ -36,7 +43,7 @@ const Profile = () => {
               />
             </div>
           </Box>
-          <Box display="flex" justifyContent="space-around">
+          <Box className={c.box}>
             <div className={c.container}>
               <Button variant="contained" fullWidth color="primary">
                 Manage Your Income
@@ -50,7 +57,12 @@ const Profile = () => {
             </div>
             <div>
               <Typography>An Overview of your Finances</Typography>
-              some components here
+              {data.map((d, i) => (
+                <Box my="5px" display="flex" key={i}>
+                  <div>{d.name}</div>
+                  <div>{d.amount}</div>
+                </Box>
+              ))}
             </div>
           </Box>
         </Paper>
