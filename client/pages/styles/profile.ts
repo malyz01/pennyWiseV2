@@ -12,6 +12,12 @@ export default makeStyles((theme: Theme) =>
       padding: '2rem 0',
       borderRadius: '20px'
     },
+    box: {
+      margin: '0 auto',
+      width: '650px',
+      display: 'flex',
+      justifyContent: 'space-between'
+    },
     container: {
       minWidth: '200px',
       maxWidth: '300px',
